@@ -6,7 +6,6 @@ import DefaultLayout from "@/components/templates/defaultLayout";
 export default function Home() {
   return (
     <DefaultLayout>
-      <>aaaa</>
     </DefaultLayout>
   );
 }
