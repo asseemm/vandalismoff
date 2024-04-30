@@ -4,7 +4,7 @@ import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 
 export const Content = styled.div`
-  padding: 20px;
+  padding: 20px 8%;
   // background-color: #f0f0f0;
   min-height: 100vh;
   max-width: 100%;
