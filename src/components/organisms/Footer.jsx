@@ -9,16 +9,21 @@ const FooterStyle = styled.footer`
   background-color: #804988;
   color: #fff;
   display: block;
+  
 `;
 
 const FooterContent = styled.div`  
   padding: 50px 8%;
+  
 `;
 
 const FooterInfo = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 100%;
+  @media screen and (max-width: 700px){
+    display: block;
+  }
  
 `;
 
@@ -26,6 +31,17 @@ const Logo = styled.p`
   width: 20%;
   font-size: 30px;
   font-family: "Rubik Bubbles", sans-serif;
+  @media screen and (max-width: 1110px){
+    font-size: 24px;
+  }
+  @media screen and (max-width: 980px){
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: 800px){
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
 `;
 
 const FooterLinkColumn = styled.div`
@@ -38,6 +54,24 @@ const FooterLinks = styled.div`
   display: flex;
   justify-content: space-between;
   width: 60%;
+
+  @media screen and (max-width: 980px){
+    flex-wrap: wrap;
+  gap: 50px;
+  width: 45%;
+  justify-content: left;
+  }
+
+  @media screen and (max-width: 750px){
+    gap: 45px;
+    width: 50%;
+    flex-wrap: nowrap;
+  }
+  @media screen and (max-width: 400px){
+    // flex-wrap: wrap;
+  gap: 15px;
+  justify-content: left;
+  }
 `;
 
 const FooterLink = styled.a`
@@ -50,11 +84,20 @@ const FooterLink = styled.a`
   &:hover {
     text-decoration: underline;
   }
+
+  @media screen and (max-width: 780px){
+    font-size: 13px ;
+  }
 `;
 const FooterGrayLink = styled.a`
   font-size: 14px;
   font-family: 'Jost', sans-serif;
   color: #C4C4C4;
+`;
+const FooterLinkColumnGray = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 `;
 const FooterGrayLine = styled.div`
   width: 100%;
@@ -112,12 +155,12 @@ const Footer = () => {
                 <FooterLink href="#">Наша команда</FooterLink>
                 <FooterLink href="#">Соц опросы</FooterLink>
               </FooterLinkColumn>
-              <FooterLinkColumn>
+            </FooterLinks>
+            <FooterLinkColumnGray>
               <FooterLink href="#">Контакты</FooterLink>
                 <FooterGrayLink >+7(707)49696</FooterGrayLink>
                 <FooterGrayLink >@hgjghjhj</FooterGrayLink>
-              </FooterLinkColumn>
-            </FooterLinks>
+              </FooterLinkColumnGray>
           </FooterInfo>
           <FooterGrayLine></FooterGrayLine>
           <FooterBottom>
