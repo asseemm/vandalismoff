@@ -8,6 +8,7 @@ export const Content = styled.div`
   // background-color: #f0f0f0;
   min-height: 100vh;
   max-width: 100%;
+  padding-top: 100vh;
 `;
 
 const DefaultLayout = ({ children }) => {
@@ -17,7 +18,7 @@ const DefaultLayout = ({ children }) => {
       <Content>
         <main>{children}</main>
       </Content>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
