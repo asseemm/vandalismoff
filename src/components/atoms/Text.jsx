@@ -8,6 +8,7 @@ const TextContainer = styled.div`
   line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : 'inherit')};
   font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 'inherit')};
   text-align: ${({ textAlign }) => textAlign};
+  justify-content: ${({ justifycontent }) => justifycontent};
 `;
 
 const Text = ({
@@ -20,10 +21,13 @@ const Text = ({
   lineHeightTablet,
   lineHeightPhone,
   color,
+  justifycontent,
   textAlign,
+  fontFamily,
 }) => {
   return (
     <TextContainer
+      fontFamily={fontFamily}
       fontSize={fontSize}
       fontSizeTablet={fontSizeTablet}
       fontSizePhone={fontSizePhone}
@@ -33,6 +37,7 @@ const Text = ({
       lineHeightPhone={lineHeightPhone}
       color={color}
       textAlign={textAlign}
+      justifycontent={justifycontent}
     >
       {children}
     </TextContainer>
