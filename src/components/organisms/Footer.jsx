@@ -3,11 +3,13 @@ import styled from 'styled-components';
 
 import Text from '../atoms/Text';
 
+import { colors } from '../base/colors';
+
 
 const FooterStyle = styled.footer`
   width: 100%;
-  background-color: #804988;
-  color: #fff;
+  background-color: ${colors.mainPurple};
+  color: ${colors.white};
   display: block;
   
 `;
@@ -68,16 +70,15 @@ const FooterLinks = styled.div`
     flex-wrap: nowrap;
   }
   @media screen and (max-width: 400px){
-    // flex-wrap: wrap;
-  gap: 15px;
-  justify-content: left;
+    gap: 15px;
+    justify-content: left;
   }
 `;
 
 const FooterLink = styled.a`
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Jost', sans-serif;
-  color: #fff;
+  color: ${colors.white};
   margin: 5px;
   text-decoration: none;
   
@@ -164,7 +165,7 @@ const Footer = () => {
           </FooterInfo>
           <FooterGrayLine></FooterGrayLine>
           <FooterBottom>
-          <Text fontSize={'20px'} color={'#FFFFFF'} justifycontent={'start'} fontFamily={'Jost'}>ZhanaAdamdar</Text>
+          <Text fontSize={'20px'} color={'#FFF'} justifycontent={'start'} fontFamily={'Jost'}>ZhanaAdamdar</Text>
           <SocialIconContent>
             <SocialIcons>
               <SocialIconSvg>
