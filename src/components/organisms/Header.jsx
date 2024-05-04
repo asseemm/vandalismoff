@@ -4,6 +4,8 @@ import Image from 'next/image';
 import MenuIcon from '@/assets/icon/menu.svg';
 import Menu from '@/components/atoms/HeaderMenu';
 
+import { colors } from '../base/colors';
+
 const HeaderStyle = styled.header`
   max-width: 100%;
   widh: 100%;
@@ -19,7 +21,7 @@ const HeaderContent = styled.div`
 const Logo = styled.p`
   font-size: 36px;
   font-family: "Rubik Bubbles", system-ui;
-  color: #804988;
+  color: ${colors.mainPurple};
 `;
 
 const ToggleButton = styled.button`

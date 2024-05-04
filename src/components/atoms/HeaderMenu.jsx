@@ -3,13 +3,15 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import CloseIcon from '@/assets/icon/close.svg';
 
+import { colors } from '../base/colors';
+
 const MenuStyle = styled.div`
   position: fixed;
   right: 0;
   top: 0;
   width: 25%;
   height: 100vh;
-  background-color: #804988;
+  background-color: ${colors.mainPurple};
   transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(100%)'};
   transition: transform 0.3s ease-in-out;
 
@@ -23,7 +25,7 @@ const CloseButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: ${colors.white};
   font-size: 30px;
   margin: 40px 40px 20px 40px;
 `;
@@ -46,7 +48,7 @@ const ItemLink = styled.a`
   float: right;
   font-size: 24px;
   font-family : "Jost", sans-serif;
-  color: #fff;
+  color: ${colors.white};
   font-weight: 400;
   text-transform: uppercase;
 
@@ -58,7 +60,7 @@ const ItemLink = styled.a`
 const ItemNum = styled.p`
   font-size: 12px;
   font-family : "Jost", sans-serif;
-  color: #fff;
+  color: ${colors.white};
   font-weight: 400;
   text-transform: uppercase;
 `;
