@@ -9,11 +9,10 @@ import Van3 from '@/assets/img/van3.jpeg'
 import Van4 from '@/assets/img/van5.jpg'
 
 
-const BlockStyle = styled.header`
+const BlockStyle = styled.div`
   max-width: 100%;
-  widh: 100%;
   height: auto; 
-  // padding: 60px 8%;
+  padding: 100px 10%;
 `;
 
 const BlockContent = styled.div`
