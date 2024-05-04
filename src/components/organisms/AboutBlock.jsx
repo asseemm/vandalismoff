@@ -8,6 +8,8 @@ import Van2 from '@/assets/img/van2.JPG'
 import Van3 from '@/assets/img/van3.jpeg'
 import Van4 from '@/assets/img/van5.jpg'
 
+import { colors } from '../base/colors';
+
 
 const BlockStyle = styled.header`
   max-width: 100%;
@@ -34,7 +36,7 @@ const AboutText = styled.p`
   font-family : "Jost", sans-serif;
   font-size: 18px;
   line-height: 26px;
-  color: #222;
+  color: ${colors.mainBlack};
   margin-top: 30px;
 
   @media screen and (max-width: 1450px){
@@ -51,19 +53,19 @@ const AboutText = styled.p`
 
 const MoreButton = styled.button`
   background-color: transparent;
-  border: 2px solid #804988;
+  border: 2px solid ${colors.mainPurple};
   cursor: pointer;
   width: 240px;
   height: 50px;
   border-radius: 30px;
-  color: #804988;
+  color: ${colors.mainPurple};
   font-size: 18px;
   margin-top: 50px;
   transition: 0.3s all ease;
 
   &:hover{
-    background-color: #804988;
-    color: #fff;
+    background-color: ${colors.mainPurple};
+    color: ${colors.white};
   }
 
   @media screen and (max-width: 550px){
