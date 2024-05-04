@@ -10,7 +10,7 @@ const HeaderStyle = styled.header`
   max-width: 100%;
   widh: 100%;
   height: auto; 
-  padding: 60px 8%;
+  padding: 60px 10%;
 `;
 
 const HeaderContent = styled.div`
