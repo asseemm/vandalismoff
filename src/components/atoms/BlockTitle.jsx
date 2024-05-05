@@ -12,12 +12,20 @@ const TitleText = styled.p`
   text-transform: uppercase;
   color: ${props => props.titleColor || '#222'};
 
+  @media screen and (max-width: 1650px) {
+    font-size: 40px;
+  }
+
   @media screen and (max-width: 1450px) {
     font-size: 36px;
   }
 
-  @media screen and (max-width: 550px) {
-    font-size: 28px;
+  @media screen and (max-width: 650px) {
+    font-size: 26px;
+  }
+
+  @media screen and (max-width: 420px) {
+    font-size: 24px;
   }
 `;
 
@@ -33,6 +41,7 @@ const TitleDesc = styled.div`
 
   @media screen and (max-width: 1780px) {
     width: 80%;
+    font-size: 22px;
   }
 
   @media screen and (max-width: 1450px) {
@@ -50,8 +59,13 @@ const TitleDesc = styled.div`
 
   @media screen and (max-width: 550px) {
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 15px;
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 420px) {
+    font-size: 14px;
   }
 `;
 
@@ -62,8 +76,8 @@ const Line = styled.div`
   background-color: ${props => props.lineColor || '#9B889D'};
 
   @media screen and (max-width: 1450px) {
-    margin-top: 15px;
-    width: 40px;
+    margin-top: 10px;
+    width: 30px;
   }
 `;
 

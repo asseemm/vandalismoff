@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <DefaultLayout>
       <AboutBlock />
-      {/* <GoalsBlock />
-      <CasesBlock /> */}
+      <GoalsBlock />
+      <CasesBlock />
     </DefaultLayout>
   );
 }
