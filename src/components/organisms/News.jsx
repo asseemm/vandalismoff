@@ -6,7 +6,7 @@ import BlockTitle from '../atoms/BlockTitle';
 
 const Content = styled.div`
     display: block;
-    padding: 50px 8%;
+    padding: 50px 10%;
 `;
 
 const NewsContainer = styled.div`

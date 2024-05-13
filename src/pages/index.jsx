@@ -15,9 +15,10 @@ export default function Home() {
       <AboutBlock />
       <GoalsBlock />
       <CasesBlock />
+      
+      <News/>
       <ProsBlock />
       <Questions />
-      <News/>
     </DefaultLayout>
   );
 }
