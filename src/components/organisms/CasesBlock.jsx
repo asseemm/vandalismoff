@@ -6,7 +6,7 @@ import Slider from "react-slick";
 const BlockStyle = styled.div`
     max-width: 100%;
     height: auto; 
-    padding: 100px 10%;
+    padding: 80px 10%;
 
     @media screen and (max-width: 650px) {
         padding: 50px 10%;
@@ -29,8 +29,8 @@ const CardContent = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 98%;
-    padding: 1%;
+    // width: 100%;
+    // padding: 1%;
     padding-bottom: 3%;
 `;
 
@@ -42,10 +42,12 @@ const CaseVideo = styled.div`
     height: auto;
     background: #9B889DA6;
     border-radius: 30px;
+    margin: 0 5px;
 
     @media screen and (max-width: 1250px) {
         width: 100%;
         height: 400px;
+        margin: 0;
         margin-bottom: 20px;
     }
 
@@ -175,7 +177,6 @@ const CasesBlock = () => {
             </CaseInfo>
             </CardContent>
         </CaseCard>
-        {/* Добавьте дополнительные CaseCard для других слайдов */}
       </BlockContent>
     </BlockStyle>
   );

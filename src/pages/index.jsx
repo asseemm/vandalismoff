@@ -6,6 +6,7 @@ import AboutBlock from "@/components/organisms/AboutBlock";
 import GoalsBlock from "@/components/organisms/GoalsBlock";
 import CasesBlock from "@/components/organisms/CasesBlock";
 import Questions from "@/components/organisms/Questions";
+import ProsBlock from "@/components/organisms/ProsBlock";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutBlock />
       <GoalsBlock />
       <CasesBlock />
+      <ProsBlock />
       <Questions />
     </DefaultLayout>
   );
