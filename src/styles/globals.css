@@ -30,3 +30,18 @@ a{
   background-size: cover;
   z-index: -1;
 }
+
+.slick-dots li button:before{
+  font-size: 10px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #804988 !important;
+  font-size: 11px !important;
+}
+
+.slick-dots li button:before{
+  color: #804988 !important;
+  transition: 0.4s all ease !important;
+}
+

@@ -7,8 +7,13 @@ import { colors } from '../base/colors';
 
 
 const Content = styled.section`
-    display: block;
-    padding: 50px 8%;
+  max-width: 100%;
+  height: auto; 
+  padding: 80px 10%;
+
+  @media screen and (max-width: 650px) {
+      padding: 40px 10%;
+  }
 `;
 
 const SectionQuestion = styled.section`
