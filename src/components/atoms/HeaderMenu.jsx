@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
-import CloseIcon from '@/assets/icon/close.svg';
+import { CloseSVG } from '@/assets/icon/CloseSVG';
 
 import { colors } from '../base/colors';
 
@@ -12,7 +11,7 @@ const MenuStyle = styled.div`
   width: 25%;
   height: 100vh;
   background-color: ${colors.mainPurple};
-  transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${({ $isOpen }) => $isOpen ? 'translateX(0)' : 'translateX(100%)'};
   transition: transform 0.3s ease-in-out;
 
   @media screen and (max-width: 700px){
@@ -67,9 +66,9 @@ const ItemNum = styled.p`
 
 const HeaderMenu = ({ isOpen, onClose }) => {
   return (
-    <MenuStyle isOpen={isOpen}>
+    <MenuStyle $isOpen={isOpen}>
       <CloseButton onClick={onClose}>
-        <Image src={CloseIcon} alt="Меню" />
+        <CloseSVG />
       </CloseButton>
       <MenuContent>
         <MenuItem><ItemLink href="#">Главная<ItemNum>01</ItemNum></ItemLink></MenuItem>
