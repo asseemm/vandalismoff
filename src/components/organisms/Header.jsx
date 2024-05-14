@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
-import MenuIcon from '@/assets/icon/menu.svg';
 import Menu from '@/components/atoms/HeaderMenu';
+import { MenuSVG } from '@/assets/icon/Menu';
 
 import { colors } from '../base/colors';
 
@@ -42,7 +41,9 @@ const Header = () => {
       <HeaderContent>
         <Logo>ВандализмOFF</Logo>
         <ToggleButton onClick={toggleMenu}>
-          <Image src={MenuIcon} alt="Меню"/>
+          {/* <Image src={MenuIcon} alt="Меню"/> */}
+          <MenuSVG />
+
         </ToggleButton>
         <Menu isOpen={isMenuOpen} onClose={toggleMenu} />
       </HeaderContent>

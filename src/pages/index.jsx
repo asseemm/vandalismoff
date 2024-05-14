@@ -12,12 +12,12 @@ import News from "@/components/organisms/News";
 export default function Home() {
   return (
     <DefaultLayout>
-      <AboutBlock />
-      <GoalsBlock />
-      <CasesBlock />
+      {/* <AboutBlock /> */}
+      {/* <GoalsBlock /> */}
+      {/* <CasesBlock /> */}
       
-      <News/>
-      <ProsBlock />
+      {/* <News/> */}
+      {/* <ProsBlock /> */}
       <Questions />
     </DefaultLayout>
   );
