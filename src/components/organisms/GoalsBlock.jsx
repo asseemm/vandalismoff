@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import BlockTitle from '../atoms/BlockTitle';
 import Image from 'next/image';
 
-import GoalsIcon from '@/assets/icon/goal.svg';
-
+import GoalsIcon from '@/assets/icon/goal.svg'
 
 const BlockStyle = styled.div`
     position: relative;
@@ -145,7 +144,7 @@ const GoalsBlock = () => {
     <BlockStyle>
       <div className='goalsblock'></div>
       <BlockContent>
-          <BlockTitle title="Наши цели" description="Главные цели нашей Команды " titleColor="#fff" deskColor="#fff" lineColor="#fff"></BlockTitle>
+          <BlockTitle title="Наши цели" description="Главные цели нашей Команды " $titleColor="#fff" $deskColor="#fff" $lineColor="#fff"></BlockTitle>
           <GoalsCont>
             <GoalBLock>
                 <GoalContent>

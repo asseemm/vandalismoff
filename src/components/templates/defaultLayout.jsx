@@ -6,9 +6,9 @@ import Footer from '@/components/organisms/Footer';
 export const Content = styled.div`
   // padding: 20px 8%;
   // background-color: #f0f0f0;
-  min-height: 100vh;
+  min-height: 80vh;
   max-width: 100%;
-  padding-top: 100vh;
+  padding-top: 80vh;
 `;
 
 const DefaultLayout = ({ children }) => {
