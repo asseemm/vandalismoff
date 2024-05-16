@@ -10,7 +10,7 @@ const TitleText = styled.p`
   font-size: 48px;
   font-weight: bold;
   text-transform: uppercase;
-  color: ${props => props.titleColor || '#222'};
+  color: ${props => props.$titleColor || '#222'};
 
   @media screen and (max-width: 1650px) {
     font-size: 40px;
@@ -33,10 +33,10 @@ const TitleDesc = styled.div`
   font-family: "Jost", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
-  color: ${props => props.deskColor || '#9B889D'};
+  color: ${props => props.$deskColor || '#9B889D'};
   display: flex;
   gap: 30px;
-  width: ${props => props.descWidth || '60%'};
+  width: ${props => props.$descWidth || '60%'};
   margin-top: 20px;
 
   @media screen and (max-width: 1780px) {
@@ -73,7 +73,7 @@ const Line = styled.div`
   margin-top: 20px;
   width: 50px;
   height: 1px;
-  background-color: ${props => props.lineColor || '#9B889D'};
+  background-color: ${props => props.$lineColor || '#9B889D'};
 
   @media screen and (max-width: 1450px) {
     margin-top: 10px;
@@ -81,12 +81,12 @@ const Line = styled.div`
   }
 `;
 
-const BlockTitle = ({ title, description, titleColor, deskColor, lineColor, descWidth }) => {
+const BlockTitle = ({ title, description, $titleColor, $deskColor, $lineColor, $descWidth }) => {
   return (
     <BlockTitleStyle>
-        <TitleText titleColor={titleColor}>{title}</TitleText>
-        <TitleDesc deskColor={deskColor} descWidth={descWidth}>
-            <Line lineColor={lineColor} />
+        <TitleText $titleColor={$titleColor}>{title}</TitleText>
+        <TitleDesc $deskColor={$deskColor} $descWidth={$descWidth}>
+            <Line $lineColor={$lineColor} />
             {description}
         </TitleDesc>
     </BlockTitleStyle>

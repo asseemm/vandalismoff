@@ -4,7 +4,8 @@ import Image from 'next/image';
 import BlockTitle from '../atoms/BlockTitle';
 
 import ProsPng from '@/assets/img/subtract.png';
-import Vector from '@/assets/icon/vectordown.svg';
+// import Vector from '@/assets/icon/vectordown.svg';
+import { VectordownSVG } from '@/assets/icon/VectordownSVG';
 
 const BlockStyle = styled.div`
     max-width: 100%;
@@ -115,7 +116,7 @@ const ProsText = styled.p`
     color: #777777;
     margin: 0 5%;
     margin-top: 40px;
-    display: ${props => props.show ? 'block' : 'none'};
+    display: ${props => props.$show ? 'block' : 'none'};
 
     @media screen and (max-width: 640px) {
         font-size: 18px;
@@ -152,16 +153,16 @@ const ProsBlock = () => {
     return (
         <BlockStyle>
             <BlockContent>
-                <BlockTitle title="Почему мы?" description="почему вы должны вступить именно в нашу команду" descWidth="30%"></BlockTitle>
+                <BlockTitle title="Почему мы?" description="почему вы должны вступить именно в нашу команду" $descWidth="30%"></BlockTitle>
                 <ProsBlocks>
                     {prosData.map((pros, index) => (
                         <Pros key={index}>
                             <ProsCont>
                                 <ProsBack src={ProsPng} alt="Background" />
                                 <ReasonText>{pros.reason}</ReasonText>
-                                <ProsBtn onClick={() => toggleText(index)}><VectorImg src={Vector} alt="Arrow down" /></ProsBtn>
+                                <ProsBtn onClick={() => toggleText(index)}><VectordownSVG /></ProsBtn>
                             </ProsCont>
-                            <ProsText show={showText[index]}>
+                            <ProsText $show={showText[index]}>
                                 {pros.text}
                             </ProsText>
                         </Pros>

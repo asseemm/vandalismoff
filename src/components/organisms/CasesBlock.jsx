@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import styled from 'styled-components';
 import BlockTitle from '../atoms/BlockTitle';
 import Slider from "react-slick";
 import ReactPlayer from 'react-player';
+
+const ReactPlayerLazy = lazy(() => import('react-player'));
 
 const BlockStyle = styled.div`
     max-width: 100%;
@@ -143,7 +145,6 @@ const CasesBlock = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Установка флага после первого рендеринга компонента
     setIsClient(true);
   }, []);
 
@@ -162,23 +163,27 @@ const CasesBlock = () => {
         <CaseCard>
           <CardContent>
             <CaseVideo>
-              {isClient && <ReactPlayer 
-                  url='https://youtu.be/_eJGenpofTw'
-                //   playing 
-                  controls 
-                  width='100%'
-                  height='100%'
-              />}
+              {isClient && (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <ReactPlayerLazy 
+                            url='https://youtu.be/_eJGenpofTw'
+                            controls 
+                            width='100%'
+                            height='100%'
+                            light={true}
+                        />
+                    </Suspense>
+                )}
             </CaseVideo>
             <CaseInfo>
-                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" descWidth="80%"></BlockTitle>
+                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
                 <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
             </CaseInfo>
           </CardContent>
         </CaseCard>
         <CaseCard>
           <CardContent>
-            <CaseVideo>
+            {/* <CaseVideo>
               {isClient && <ReactPlayer 
                   url='https://youtu.be/_eJGenpofTw'
                 //   playing 
@@ -186,16 +191,16 @@ const CasesBlock = () => {
                   width='100%'
                   height='100%'
               />}
-            </CaseVideo>
+            </CaseVideo> */}
             <CaseInfo>
-                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" descWidth="80%"></BlockTitle>
+                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
                 <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
             </CaseInfo>
           </CardContent>
         </CaseCard>
         <CaseCard>
           <CardContent>
-            <CaseVideo>
+            {/* <CaseVideo>
               {isClient && <ReactPlayer 
                   url='https://youtu.be/_eJGenpofTw'
                 //   playing 
@@ -203,16 +208,16 @@ const CasesBlock = () => {
                   width='100%'
                   height='100%'
               />}
-            </CaseVideo>
+            </CaseVideo> */}
             <CaseInfo>
-                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" descWidth="80%"></BlockTitle>
+                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
                 <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
             </CaseInfo>
           </CardContent>
         </CaseCard>
         <CaseCard>
           <CardContent>
-            <CaseVideo>
+            {/* <CaseVideo>
               {isClient && <ReactPlayer 
                   url='https://youtu.be/_eJGenpofTw'
                 //   playing 
@@ -220,9 +225,9 @@ const CasesBlock = () => {
                   width='100%'
                   height='100%'
               />}
-            </CaseVideo>
+            </CaseVideo> */}
             <CaseInfo>
-                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" descWidth="80%"></BlockTitle>
+                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
                 <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
             </CaseInfo>
           </CardContent>

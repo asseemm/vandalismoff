@@ -71,14 +71,14 @@ const HeaderMenu = ({ isOpen, onClose }) => {
         <CloseSVG />
       </CloseButton>
       <MenuContent>
-        <MenuItem><ItemLink href="#">Главная<ItemNum>01</ItemNum></ItemLink></MenuItem>
-        <MenuItem><ItemLink href="#">Кто мы?<ItemNum>02</ItemNum></ItemLink></MenuItem>
-        <MenuItem><ItemLink href="#">Наши цели<ItemNum>03</ItemNum></ItemLink></MenuItem>
-        <MenuItem><ItemLink href="#">Наши кейсы<ItemNum>04</ItemNum></ItemLink></MenuItem>
-        <MenuItem><ItemLink href="#">Новости<ItemNum>05</ItemNum></ItemLink></MenuItem>
-        <MenuItem><ItemLink href="#">Почему мы?<ItemNum>06</ItemNum></ItemLink></MenuItem>
-        <MenuItem><ItemLink href="#">Наша команда<ItemNum>07</ItemNum></ItemLink></MenuItem>
-        <MenuItem><ItemLink href="#">Контакты<ItemNum>08</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/">Главная<ItemNum>01</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/about">Кто мы?<ItemNum>02</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/goals">Наши цели<ItemNum>03</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/cases">Наши кейсы<ItemNum>04</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/news">Новости<ItemNum>05</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/pros">Почему мы?<ItemNum>06</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/team">Наша команда<ItemNum>07</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/contact">Контакты<ItemNum>08</ItemNum></ItemLink></MenuItem>
       </MenuContent>
     </MenuStyle>
   );
