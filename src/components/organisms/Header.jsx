@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Menu from '@/components/atoms/HeaderMenu';
 import { MenuSVG } from '@/assets/icon/Menu';
+import { MenuWhite} from '@/assets/icon/MenuWhite';
 
 import { colors } from '../base/colors';
 
@@ -10,6 +11,7 @@ const HeaderStyle = styled.header`
   widh: 100%;
   height: auto; 
   padding: 60px 10%;
+  background-color: ${({ backgroundColor }) => (backgroundColor ? backgroundColor : 'transparent')};
 `;
 
 const HeaderContent = styled.div`
@@ -20,7 +22,7 @@ const HeaderContent = styled.div`
 const Logo = styled.p`
   font-size: 36px;
   font-family: "Rubik Bubbles", system-ui;
-  color: ${colors.mainPurple};
+  color: ${({ color }) => (color ? color : colors.mainPurple)};
 `;
 
 const ToggleButton = styled.button`
@@ -29,7 +31,15 @@ const ToggleButton = styled.button`
   cursor: pointer;
 `;
 
-const Header = () => {
+const MenuPurple = styled.div`
+  display: ${({ displayMenuPurple }) => (displayMenuPurple ? displayMenuPurple : 'block')};
+`;
+
+const MenuWhiteIcon = styled.div`
+  display:  ${({ displayMenuWhite }) => (displayMenuWhite ? displayMenuWhite : 'none')}; 
+`;
+
+const Header = ({ backgroundColor, color, displayMenuPurple, displayMenuWhite }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -37,13 +47,13 @@ const Header = () => {
   };
 
   return (
-    <HeaderStyle>
+    <HeaderStyle backgroundColor={backgroundColor}>
       <HeaderContent>
-        <Logo>ВандализмOFF</Logo>
+        <Logo color={color}>ВандализмOFF</Logo>
         <ToggleButton onClick={toggleMenu}>
           {/* <Image src={MenuIcon} alt="Меню"/> */}
-          <MenuSVG />
-
+          <MenuPurple displayMenuPurple={displayMenuPurple}><MenuSVG /></MenuPurple>
+          <MenuWhiteIcon displayMenuWhite={displayMenuWhite}><MenuWhite /></MenuWhiteIcon>
         </ToggleButton>
         <Menu isOpen={isMenuOpen} onClose={toggleMenu} />
       </HeaderContent>

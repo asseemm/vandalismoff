@@ -15,12 +15,12 @@ const Content = styled.section`
   }
 `;
 
-export default function About() {
+export default function Team() {
 return (
     <DefaultLayout>
         <Header backgroundColor={'#804988'} color={'#fff'} displayMenuWhite={'block'} displayMenuPurple={'none'}/>
         <Content>
-            <BlockTitle title="О нас" description="Кто мы таки и зачем нам все это?" />
+            <BlockTitle title="Наша команда" description="Все активисты комнды ВандализмOFF" />
         </Content>
     </DefaultLayout>
 );

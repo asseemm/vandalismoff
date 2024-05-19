@@ -151,7 +151,7 @@ const ProsBlock = () => {
     };
 
     return (
-        <BlockStyle>
+        <BlockStyle id='prosblock'>
             <BlockContent>
                 <BlockTitle title="Почему мы?" description="почему вы должны вступить именно в нашу команду" $descWidth="30%"></BlockTitle>
                 <ProsBlocks>

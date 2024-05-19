@@ -8,13 +8,12 @@ export const Content = styled.div`
   // background-color: #f0f0f0;
   min-height: 80vh;
   max-width: 100%;
-  padding-top: 80vh;
+  // padding-top: 80vh;
 `;
 
 const DefaultLayout = ({ children }) => {
   return (
     <div className="container">
-      <Header />
       <Content>
         <main>{children}</main>
       </Content>
