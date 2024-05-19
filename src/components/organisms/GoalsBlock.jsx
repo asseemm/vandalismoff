@@ -141,7 +141,7 @@ const GoalDesc = styled.p`
 
 const GoalsBlock = () => {
   return (
-    <BlockStyle>
+    <BlockStyle id='goalsblock'>
       <div className='goalsblock'></div>
       <BlockContent>
           <BlockTitle title="Наши цели" description="Главные цели нашей Команды " $titleColor="#fff" $deskColor="#fff" $lineColor="#fff"></BlockTitle>

@@ -9,7 +9,7 @@ const ReactPlayerLazy = lazy(() => import('react-player'));
 const BlockStyle = styled.div`
     max-width: 100%;
     height: auto; 
-    padding: 80px 10%;
+    padding: 100px 10%;
 
     @media screen and (max-width: 650px) {
         padding: 50px 10%;
@@ -101,45 +101,6 @@ const CaseText = styled.p`
     }
 `;
 
-const Stop = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
-    background: #804988;
-
-    @media screen and (max-width: 650px) {
-        width: 100px;
-        height: 100px;
-    }
-`;
-
-const StopDec = styled.div`
-    width: 80px;
-    height: 80px;
-    border-radius: 100px;
-    border: 10px solid #fff;
-    text-align: center;
-    align-items: center;
-
-    @media screen and (max-width: 650px) {
-        width: 60px;
-        height: 60px;
-        border: 5px solid #fff;
-    }
-`;
-
-const StopTriangle = styled.span`
-    font-size: 48px;
-    color: #fff;
-    transform: rotate(30deg);
-
-    @media screen and (max-width: 650px) {
-        font-size: 36px;
-    }
-`;
 
 const CasesBlock = () => {
   const [isClient, setIsClient] = useState(false);
@@ -183,15 +144,19 @@ const CasesBlock = () => {
         </CaseCard>
         <CaseCard>
           <CardContent>
-            {/* <CaseVideo>
-              {isClient && <ReactPlayer 
-                  url='https://youtu.be/_eJGenpofTw'
-                //   playing 
-                  controls 
-                  width='100%'
-                  height='100%'
-              />}
-            </CaseVideo> */}
+          <CaseVideo>
+              {isClient && (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <ReactPlayerLazy 
+                            url='https://youtu.be/_eJGenpofTw'
+                            controls 
+                            width='100%'
+                            height='100%'
+                            light={true}
+                        />
+                    </Suspense>
+                )}
+            </CaseVideo>
             <CaseInfo>
                 <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
                 <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
@@ -200,15 +165,19 @@ const CasesBlock = () => {
         </CaseCard>
         <CaseCard>
           <CardContent>
-            {/* <CaseVideo>
-              {isClient && <ReactPlayer 
-                  url='https://youtu.be/_eJGenpofTw'
-                //   playing 
-                  controls 
-                  width='100%'
-                  height='100%'
-              />}
-            </CaseVideo> */}
+          <CaseVideo>
+              {isClient && (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <ReactPlayerLazy 
+                            url='https://youtu.be/_eJGenpofTw'
+                            controls 
+                            width='100%'
+                            height='100%'
+                            light={true}
+                        />
+                    </Suspense>
+                )}
+            </CaseVideo>
             <CaseInfo>
                 <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
                 <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
@@ -217,15 +186,19 @@ const CasesBlock = () => {
         </CaseCard>
         <CaseCard>
           <CardContent>
-            {/* <CaseVideo>
-              {isClient && <ReactPlayer 
-                  url='https://youtu.be/_eJGenpofTw'
-                //   playing 
-                  controls 
-                  width='100%'
-                  height='100%'
-              />}
-            </CaseVideo> */}
+          <CaseVideo>
+              {isClient && (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <ReactPlayerLazy 
+                            url='https://youtu.be/_eJGenpofTw'
+                            controls 
+                            width='100%'
+                            height='100%'
+                            light={true}
+                        />
+                    </Suspense>
+                )}
+            </CaseVideo>
             <CaseInfo>
                 <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
                 <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>

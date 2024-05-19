@@ -45,3 +45,6 @@ a{
   transition: 0.4s all ease !important;
 }
 
+.react-player__preview{
+  border-radius: 15px;
+}

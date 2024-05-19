@@ -13,6 +13,7 @@ const MenuStyle = styled.div`
   background-color: ${colors.mainPurple};
   transform: ${({ $isOpen }) => $isOpen ? 'translateX(0)' : 'translateX(100%)'};
   transition: transform 0.3s ease-in-out;
+  z-index: 100;
 
   @media screen and (max-width: 700px){
     width: 80%;
@@ -73,10 +74,10 @@ const HeaderMenu = ({ isOpen, onClose }) => {
       <MenuContent>
         <MenuItem><ItemLink href="/">Главная<ItemNum>01</ItemNum></ItemLink></MenuItem>
         <MenuItem><ItemLink href="/about">Кто мы?<ItemNum>02</ItemNum></ItemLink></MenuItem>
-        <MenuItem><ItemLink href="/goals">Наши цели<ItemNum>03</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/#goalsblock">Наши цели<ItemNum>03</ItemNum></ItemLink></MenuItem>
         <MenuItem><ItemLink href="/cases">Наши кейсы<ItemNum>04</ItemNum></ItemLink></MenuItem>
         <MenuItem><ItemLink href="/news">Новости<ItemNum>05</ItemNum></ItemLink></MenuItem>
-        <MenuItem><ItemLink href="/pros">Почему мы?<ItemNum>06</ItemNum></ItemLink></MenuItem>
+        <MenuItem><ItemLink href="/#prosblock">Почему мы?<ItemNum>06</ItemNum></ItemLink></MenuItem>
         <MenuItem><ItemLink href="/team">Наша команда<ItemNum>07</ItemNum></ItemLink></MenuItem>
         <MenuItem><ItemLink href="/contact">Контакты<ItemNum>08</ItemNum></ItemLink></MenuItem>
       </MenuContent>
