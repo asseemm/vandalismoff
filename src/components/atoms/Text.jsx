@@ -7,9 +7,9 @@ const TextContainer = styled.div`
   font-family: ${({ fontFamily }) => (fontFamily ? fontFamily : '"Jost", sans-serif')};
   line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : 'inherit')};
   font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 'inherit')};
-  text-align: ${({ textAlign }) => textAlign};
+  text-align: ${({ textalign }) => textalign};
   justify-content: ${({ justifycontent }) => justifycontent};
-  text-transform: ${({ texTransform }) => texTransform};
+  text-transform: ${({ textransform }) => textransform};
 `;
 
 const Text = ({
@@ -23,8 +23,8 @@ const Text = ({
   lineHeightPhone,
   color,
   justifycontent,
-  textAlign,
-  texTransform,
+  textalign,
+  textransform,
   fontFamily,
 }) => {
   return (
@@ -38,8 +38,8 @@ const Text = ({
       lineHeightTablet={lineHeightTablet}
       lineHeightPhone={lineHeightPhone}
       color={color}
-      textAlign={textAlign}
-      texTransform={texTransform}
+      textalign={textalign}
+      textransform={textransform}
       justifycontent={justifycontent}
     >
       {children}
