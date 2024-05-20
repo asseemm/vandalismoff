@@ -6,6 +6,7 @@ import CasesBlock from "@/components/organisms/CasesBlock";
 import ProsBlock from "@/components/organisms/ProsBlock";
 import Questions from "@/components/organisms/Questions";
 import Team from "@/components/organisms/Team";
+import Feedback from "@/components/organisms/Feedback";
 
 const Content = styled.section`
   // padding-top: 80vh;
@@ -25,6 +26,7 @@ export default function Main() {
       {/* <Team/> */}
       <ProsBlock />
       <Questions />
+      <Feedback />
     </Content>
   );
 }
