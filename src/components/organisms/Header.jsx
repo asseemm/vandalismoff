@@ -11,7 +11,7 @@ const HeaderStyle = styled.header`
   widh: 100%;
   height: auto; 
   padding: 60px 10%;
-  background-color: ${({ backgroundColor }) => (backgroundColor ? backgroundColor : 'transparent')};
+  background-color: ${({ backgroundcolor }) => (backgroundcolor ? backgroundcolor : 'transparent')};
 `;
 
 const HeaderContent = styled.div`
@@ -36,10 +36,10 @@ const MenuPurple = styled.div`
 `;
 
 const MenuWhiteIcon = styled.div`
-  display:  ${({ displayMenuWhite }) => (displayMenuWhite ? displayMenuWhite : 'none')}; 
+  display:  ${({ displaymenuwhite }) => (displaymenuwhite ? displaymenuwhite : 'none')}; 
 `;
 
-const Header = ({ backgroundColor, color, displayMenuPurple, displayMenuWhite }) => {
+const Header = ({ backgroundcolor, color, displayMenuPurple, displaymenuwhite }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -47,13 +47,13 @@ const Header = ({ backgroundColor, color, displayMenuPurple, displayMenuWhite })
   };
 
   return (
-    <HeaderStyle backgroundColor={backgroundColor}>
+    <HeaderStyle backgroundcolor={backgroundcolor}>
       <HeaderContent>
         <Logo color={color}>ВандализмOFF</Logo>
         <ToggleButton onClick={toggleMenu}>
           {/* <Image src={MenuIcon} alt="Меню"/> */}
           <MenuPurple displayMenuPurple={displayMenuPurple}><MenuSVG /></MenuPurple>
-          <MenuWhiteIcon displayMenuWhite={displayMenuWhite}><MenuWhite /></MenuWhiteIcon>
+          <MenuWhiteIcon displaymenuwhite={displaymenuwhite}><MenuWhite /></MenuWhiteIcon>
         </ToggleButton>
         <Menu isOpen={isMenuOpen} onClose={toggleMenu} />
       </HeaderContent>
