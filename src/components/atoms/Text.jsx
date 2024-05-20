@@ -9,6 +9,7 @@ const TextContainer = styled.div`
   font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 'inherit')};
   text-align: ${({ textAlign }) => textAlign};
   justify-content: ${({ justifycontent }) => justifycontent};
+  text-transform: ${({ texTransform }) => texTransform};
 `;
 
 const Text = ({
@@ -23,6 +24,7 @@ const Text = ({
   color,
   justifycontent,
   textAlign,
+  texTransform,
   fontFamily,
 }) => {
   return (
@@ -37,6 +39,7 @@ const Text = ({
       lineHeightPhone={lineHeightPhone}
       color={color}
       textAlign={textAlign}
+      texTransform={texTransform}
       justifycontent={justifycontent}
     >
       {children}
