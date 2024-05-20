@@ -7,6 +7,8 @@ import Left from '@/assets/img/Left.png';
 import Right from '@/assets/img/Right.png';
 import Up from '@/assets/img/Up.png';
 
+
+
 import Text from '../atoms/Text';
 
 const Block = styled.div`
