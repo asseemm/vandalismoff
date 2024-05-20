@@ -7,12 +7,17 @@ import ProsBlock from "@/components/organisms/ProsBlock";
 import Questions from "@/components/organisms/Questions";
 
 const Content = styled.section`
-  padding-top: 80vh;
+  // padding-top: 80vh;
+`;
+
+const MainBlock = styled.div`
+  padding-top: 100vh;
 `;
 
 export default function Main() {
   return (
     <Content>
+      <MainBlock />
       <AboutBlock />
       <GoalsBlock />
       <CasesBlock />
