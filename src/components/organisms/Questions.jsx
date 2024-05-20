@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import Text from '../atoms/Text';
+
 import BlockTitle from '../atoms/BlockTitle';
 import { colors } from '../base/colors';
 
