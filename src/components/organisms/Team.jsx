@@ -70,7 +70,7 @@ const Team = () => {
 
   return (
     <Block>
-      <Text texTransform={'uppercase'} fontFamily={'Jost'}  fontWeight={'bold'} fontSize={'50px'} color={'#804988'} textAlign="center">Our team</Text>
+      <Text textransform={'uppercase'} fontFamily={'Jost'}  fontWeight={'bold'} fontSize={'50px'} color={'#804988'} textalign="center">Our team</Text>
       <TeamContainer onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} ref={containerRef}>
         <CentralFigure>
           <Image src={centralImage} alt="Central Figure" layout="fill" objectFit="cover" />

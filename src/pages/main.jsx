@@ -5,19 +5,24 @@ import GoalsBlock from "@/components/organisms/GoalsBlock";
 import CasesBlock from "@/components/organisms/CasesBlock";
 import ProsBlock from "@/components/organisms/ProsBlock";
 import Questions from "@/components/organisms/Questions";
-import Team from "@/components/organisms/Team";
+// import Team from "@/components/organisms/Team";
 
 const Content = styled.section`
-  padding-top: 80vh;
+  // padding-top: 80vh;
+`;
+
+const MainBlock = styled.div`
+  padding-top: 100vh;
 `;
 
 export default function Main() {
   return (
     <Content>
+      <MainBlock />
       <AboutBlock />
       <GoalsBlock />
       <CasesBlock />
-      <Team/>
+      {/* <Team/> */}
       <ProsBlock />
       <Questions />
     </Content>

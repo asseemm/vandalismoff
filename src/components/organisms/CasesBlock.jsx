@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import BlockTitle from '../atoms/BlockTitle';
 import Slider from "react-slick";
 import ReactPlayer from 'react-player';
+import useContentful from '@/useContentful';
 
 const ReactPlayerLazy = lazy(() => import('react-player'));
 
@@ -104,9 +105,12 @@ const CaseText = styled.p`
 
 const CasesBlock = () => {
   const [isClient, setIsClient] = useState(false);
+  const [cases, setCases] = useState([]);
+  const { getCases } = useContentful();
 
   useEffect(() => {
     setIsClient(true);
+    getCases().then((response) => console.log(response));
   }, []);
 
   const settings = {

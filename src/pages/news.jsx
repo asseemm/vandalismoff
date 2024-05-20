@@ -19,7 +19,17 @@ export default function News() {
 return (
     <DefaultLayout>
         <Header backgroundColor={'#804988'} color={'#fff'} displayMenuWhite={'block'} displayMenuPurple={'none'}/>
+        <div class="line-text">
+            <div class="line"></div>    
+                <div class="marquee">
+                    <span>
+                        <div class="text"><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p><p>новости</p></div>
+                    </span>
+                </div>
+            <div class="line"></div>
+        </div>
         <Content>
+        
             <BlockTitle title="Новости" description="Все новости где есть мы и акты вандализма" />
         </Content>
     </DefaultLayout>
