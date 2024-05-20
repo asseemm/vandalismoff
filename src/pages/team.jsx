@@ -18,7 +18,7 @@ const Content = styled.section`
 export default function Team() {
 return (
     <DefaultLayout>
-        <Header backgroundColor={'#804988'} color={'#fff'} displayMenuWhite={'block'} displayMenuPurple={'none'}/>
+        <Header backgroundcolor={'#804988'} color={'#fff'} displaymenuwhite={'block'} displayMenuPurple={'none'}/>
         <Content>
             <BlockTitle title="Наша команда" description="Все активисты комнды ВандализмOFF" />
         </Content>
