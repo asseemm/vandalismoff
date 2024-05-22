@@ -15,6 +15,10 @@ const Content = styled.section`
 
 const MainBlock = styled.div`
   padding-top: 100vh;
+
+  @media screen and (max-width: 800px){
+    padding-top: 40vh;
+  }
 `;
 
 export default function Main() {
