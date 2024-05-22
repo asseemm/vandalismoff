@@ -40,10 +40,10 @@ const MenuPurple = styled.div`
 `;
 
 const MenuWhiteIcon = styled.div`
-  display:  ${({ displaymenuwhite }) => (displaymenuwhite ? displaymenuwhite : 'none')}; 
+  display:  ${({ $displaymenuwhite }) => ($displaymenuwhite ? $displaymenuwhite : 'none')}; 
 `;
 
-const Header = ({ backgroundcolor, color, displayMenuPurple, displaymenuwhite }) => {
+const Header = ({ backgroundcolor, color, displayMenuPurple, $displaymenuwhite }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -57,7 +57,7 @@ const Header = ({ backgroundcolor, color, displayMenuPurple, displaymenuwhite })
         <ToggleButton onClick={toggleMenu}>
           {/* <Image src={MenuIcon} alt="Меню"/> */}
           <MenuPurple displayMenuPurple={displayMenuPurple}><MenuSVG /></MenuPurple>
-          <MenuWhiteIcon displaymenuwhite={displaymenuwhite}><MenuWhite /></MenuWhiteIcon>
+          <MenuWhiteIcon $displaymenuwhite={$displaymenuwhite}><MenuWhite /></MenuWhiteIcon>
         </ToggleButton>
         <Menu isOpen={isMenuOpen} onClose={toggleMenu} />
       </HeaderContent>

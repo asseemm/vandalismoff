@@ -18,7 +18,7 @@ const Content = styled.section`
 export default function About() {
 return (
     <DefaultLayout>
-        <Header backgroundcolor={'#804988'} color={'#fff'} displaymenuwhite={'block'} displayMenuPurple={'none'}/>
+        <Header backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} displayMenuPurple={'none'}/>
         <Content>
             <BlockTitle title="О нас" description="Кто мы таки и зачем нам все это?" />
         </Content>
