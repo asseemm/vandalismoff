@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import BlockTitle from '../atoms/BlockTitle';
 import Image from 'next/image';
 
-import GoalsIcon from '@/assets/icon/goal.svg'
+import { GoalSVG } from '@/assets/icon/GoalSVG';
 
 const BlockStyle = styled.div`
     position: relative;
@@ -148,7 +148,7 @@ const GoalsBlock = () => {
           <GoalsCont>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon><Image src={GoalsIcon} alt="" style={{ width: '100%' }} /></GoalIcon>
+                    <GoalIcon><GoalSVG /></GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Индивидуальный онлайн-расчет</GoalTitle>
                         <GoalDesc>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта</GoalDesc>
@@ -157,7 +157,7 @@ const GoalsBlock = () => {
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon><Image src={GoalsIcon} alt="" style={{ width: '100%' }} /></GoalIcon>
+                    <GoalIcon><GoalSVG /></GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Забор груза из любого района страны</GoalTitle>
                         <GoalDesc>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта</GoalDesc>
@@ -166,7 +166,7 @@ const GoalsBlock = () => {
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon><Image src={GoalsIcon} alt="" style={{ width: '100%' }} /></GoalIcon>
+                    <GoalIcon><GoalSVG /></GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Загрузка и выгрузка 24/7</GoalTitle>
                         <GoalDesc>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта</GoalDesc>
@@ -175,7 +175,7 @@ const GoalsBlock = () => {
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon><Image src={GoalsIcon} alt="" style={{ width: '100%' }} /></GoalIcon>
+                    <GoalIcon><GoalSVG /></GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Видео-и фотоотчет со склада</GoalTitle>
                         <GoalDesc>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта</GoalDesc>

@@ -23,6 +23,10 @@ const Logo = styled.p`
   font-size: 36px;
   font-family: "Rubik Bubbles", system-ui;
   color: ${({ color }) => (color ? color : colors.mainPurple)};
+
+  @media screen and (max-width: 700px){
+    font-size: 21px;
+  }
 `;
 
 const ToggleButton = styled.button`
