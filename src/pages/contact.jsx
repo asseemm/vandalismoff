@@ -18,7 +18,7 @@ const Content = styled.section`
 export default function Contact() {
 return (
     <DefaultLayout>
-        <Header backgroundcolor={'#804988'} color={'#fff'} displaymenuwhite={'block'} displayMenuPurple={'none'}/>
+        <Header backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} displayMenuPurple={'none'}/>
         <Content>
             <BlockTitle title="Наши контакты" description="Обязательно свяжеся с вами сразу как вы отправите" $descWidth="30%" />
         </Content>
