@@ -102,117 +102,54 @@ const CaseText = styled.p`
     }
 `;
 
-
 const CasesBlock = () => {
-  const [isClient, setIsClient] = useState(false);
-  const [cases, setCases] = useState([]);
-  const { getCases } = useContentful();
-
-  useEffect(() => {
-    setIsClient(true);
-    getCases().then((response) => console.log(response));
-  }, []);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  };
-
-  return (
-    <BlockStyle>
-      <BlockContent {...settings}>
-        <CaseCard>
-          <CardContent>
-            <CaseVideo>
-              {isClient && (
+    const [isClient, setIsClient] = useState(false);
+    const [cases, setCases] = useState([]);
+    const { getCases } = useContentful();
+  
+    useEffect(() => {
+      setIsClient(true);
+      getCases().then((data) => setCases(data));
+    }, []);
+  
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+    };
+  
+    return (
+      <BlockStyle>
+        <BlockContent {...settings}>
+          {cases.map((caseItem, index) => (
+            <CaseCard key={index}>
+              <CardContent>
+                <CaseVideo>
+                  {isClient && (
                     <Suspense fallback={<div>Loading...</div>}>
-                        <ReactPlayerLazy 
-                            url='https://youtu.be/_eJGenpofTw'
-                            controls 
-                            width='100%'
-                            height='100%'
-                            light={true}
-                        />
+                      <ReactPlayerLazy 
+                        url="https://youtu.be/_eJGenpofTw"
+                        controls 
+                        width='100%'
+                        height='100%'
+                        light={true}
+                      />
                     </Suspense>
-                )}
-            </CaseVideo>
-            <CaseInfo>
-                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
-                <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
-            </CaseInfo>
-          </CardContent>
-        </CaseCard>
-        <CaseCard>
-          <CardContent>
-          <CaseVideo>
-              {isClient && (
-                    <Suspense fallback={<div>Loading...</div>}>
-                        <ReactPlayerLazy 
-                            url='https://youtu.be/_eJGenpofTw'
-                            controls 
-                            width='100%'
-                            height='100%'
-                            light={true}
-                        />
-                    </Suspense>
-                )}
-            </CaseVideo>
-            <CaseInfo>
-                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
-                <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
-            </CaseInfo>
-          </CardContent>
-        </CaseCard>
-        <CaseCard>
-          <CardContent>
-          <CaseVideo>
-              {isClient && (
-                    <Suspense fallback={<div>Loading...</div>}>
-                        <ReactPlayerLazy 
-                            url='https://youtu.be/_eJGenpofTw'
-                            controls 
-                            width='100%'
-                            height='100%'
-                            light={true}
-                        />
-                    </Suspense>
-                )}
-            </CaseVideo>
-            <CaseInfo>
-                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
-                <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
-            </CaseInfo>
-          </CardContent>
-        </CaseCard>
-        <CaseCard>
-          <CardContent>
-          <CaseVideo>
-              {isClient && (
-                    <Suspense fallback={<div>Loading...</div>}>
-                        <ReactPlayerLazy 
-                            url='https://youtu.be/_eJGenpofTw'
-                            controls 
-                            width='100%'
-                            height='100%'
-                            light={true}
-                        />
-                    </Suspense>
-                )}
-            </CaseVideo>
-            <CaseInfo>
-                <BlockTitle title="Украсили остановку в центре города" description="почему вы должны вступить именно в нашу команду" $descWidth="80%"></BlockTitle>
-                <CaseText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</CaseText>
-            </CaseInfo>
-          </CardContent>
-        </CaseCard>
-        {/* Другие CaseCard компоненты */}
-      </BlockContent>
-    </BlockStyle>
-  );
-}
-
-export default CasesBlock;
+                  )}
+                </CaseVideo>
+                <CaseInfo>
+                  <BlockTitle title={caseItem.title} description={caseItem.subtitle}></BlockTitle>
+                  <CaseText>{caseItem.text}</CaseText>
+                </CaseInfo>
+              </CardContent>
+            </CaseCard>
+          ))}
+        </BlockContent>
+      </BlockStyle>
+    );
+  }
+  
+  export default CasesBlock;

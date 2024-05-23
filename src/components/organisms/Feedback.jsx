@@ -8,6 +8,7 @@ const BlockStyle = styled.div`
   height: auto; 
   padding: 100px 10%;
   // background: #80498880;
+  padding-top: 0px;
 `;
 
 const BlockContent = styled.div`
