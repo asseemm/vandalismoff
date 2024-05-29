@@ -11,19 +11,14 @@ import Van2 from '@/assets/img/van2.JPG'
 const Content = styled.section`
   max-width: 100%;
   height: auto;
-  padding: 80px 10%;
-  padding-top: 20vh;
-  padding: 80px 10%;
-
-  @media screen and (max-width: 650px) {
-      padding: 40px 10%;
-  }
 `;
 
 const Container = styled.div`
   .start {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 150px 10%;
+    @media screen and (max-width: 650px) {
+        padding: 40px 10%;
+    }
   }
   .start-cont {
     position: relative;
@@ -129,20 +124,29 @@ const Container = styled.div`
 `;
 
 const HistorySection = styled.div`
-  padding-top: 5%;
-  padding-bottom: 5%;
-  background: url('/images/color.jpg') no-repeat center;
-  background-size: cover;
+  // padding-top: 5%;
+  // padding-bottom: 5%;
+  position: relative;
 
-  @media screen and (max-width: 750px){
-    background: url('../images/color_phone.jpg') no-repeat center;
-    background-size: cover;
+  .background{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: #804988;
+    height: 40vh;
+    z-index; 1;
+  }
+  
+  .container{
+    padding: 80px 10%;
+    position: relative;
+    z-index: 5;
+    @media screen and (max-width: 650px) {
+        padding: 40px 10%;
+    }
   }
 
   .history-cont {
-    margin-left: 13%;
-    margin-right: 13%;
-
     @media screen and (max-width: 750px) {
       margin-left: 0;
       margin-right: 0;
@@ -159,8 +163,14 @@ const HistorySection = styled.div`
       justify-content: center;
     }
   }
+  .blue-line{
+    background-color: #fff;
+  }
+  .title{
+    color: #fff;
+  }
   .step {
-    width: 31%;
+    width: 22%;
 
     @media screen and (max-width: 750px) {
       width: 60%;
@@ -204,7 +214,7 @@ const PhilosophySection = styled.div`
 export default function About() {
   return (
     <DefaultLayout>
-      <Header $backgroundColor='#804988' $color='#fff' displaymenuwhite='block' $displayMenuPurple='none' />
+      <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} displayMenuPurple={'none'}/>
       <Container>
         <Content>
           <div className="start">
@@ -232,6 +242,7 @@ export default function About() {
             </div>
           </div>
           <HistorySection>
+            <div className="background"></div>
             <div className="container">
               <div className="history-cont">
                     <div className="block-head" data-aos="zoom-in">
@@ -248,6 +259,11 @@ export default function About() {
                     <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} /></div>
                     <p className="year">2008</p>
                     <p className="text">Ребрендинг</p>
+                  </div>
+                  <div className="step" data-aos="zoom-in">
+                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} /></div>
+                    <p className="year">2022</p>
+                    <p className="text">Расширение</p>
                   </div>
                   <div className="step" data-aos="zoom-in">
                     <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} /></div>
