@@ -150,8 +150,8 @@ const GoalsBlock = () => {
                 <GoalContent>
                     <GoalIcon><GoalSVG /></GoalIcon>
                     <GoalInfo>
-                        <GoalTitle>Индивидуальный онлайн-расчет</GoalTitle>
-                        <GoalDesc>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта</GoalDesc>
+                        <GoalTitle>Изменить мышление общества</GoalTitle>
+                        <GoalDesc>Исправить нарушенное мышление общества, направив его в правильное русло.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>
@@ -159,8 +159,8 @@ const GoalsBlock = () => {
                 <GoalContent>
                     <GoalIcon><GoalSVG /></GoalIcon>
                     <GoalInfo>
-                        <GoalTitle>Забор груза из любого района страны</GoalTitle>
-                        <GoalDesc>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта</GoalDesc>
+                        <GoalTitle>Противодействовать актам вандализма</GoalTitle>
+                        <GoalDesc>Снизить количество случаев вандализма в нашей стране.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>
@@ -168,8 +168,8 @@ const GoalsBlock = () => {
                 <GoalContent>
                     <GoalIcon><GoalSVG /></GoalIcon>
                     <GoalInfo>
-                        <GoalTitle>Загрузка и выгрузка 24/7</GoalTitle>
-                        <GoalDesc>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта</GoalDesc>
+                        <GoalTitle>Пробудить отвественность</GoalTitle>
+                        <GoalDesc>Призвать людей к ответственности за свои действия и нарушения.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>
@@ -177,8 +177,8 @@ const GoalsBlock = () => {
                 <GoalContent>
                     <GoalIcon><GoalSVG /></GoalIcon>
                     <GoalInfo>
-                        <GoalTitle>Видео-и фотоотчет со склада</GoalTitle>
-                        <GoalDesc>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта</GoalDesc>
+                        <GoalTitle>Жить в комфортной стране</GoalTitle>
+                        <GoalDesc>Перестать создавать дискомфорт своему же городу и стране.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>

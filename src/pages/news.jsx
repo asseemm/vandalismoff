@@ -18,7 +18,7 @@ const Content = styled.section`
 export default function News() {
 return (
     <DefaultLayout>
-        <Header backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} displayMenuPurple={'none'}/>
+        <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} displayMenuPurple={'none'}/>
         <div class="line-text">
             <div class="line"></div>    
                 <div class="marquee">

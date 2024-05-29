@@ -86,7 +86,11 @@ const TeamPage = () => {
 export default function Team() {
   return (
     <DefaultLayout>
+<<<<<<< HEAD
         <Header backgroundcolor={'#804988'} color={'#fff'} displaymenuwhite={'block'} displayMenuPurple={'none'} />
+=======
+        <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} displayMenuPurple={'none'}/>
+>>>>>>> fc0a3b63bca648a962cf62f23406140579e08c6a
         <Content>
             <BlockTitle title="Наша команда" description="Все активисты команды ВандализмOFF" />
             <TeamPage />
