@@ -34,8 +34,7 @@ const MenuContent = styled.ul`
   padding: 12%;
   float: right;
   width: 70%;
-  heidth: 100%;
-  display: grid;
+  height: 100%;
   gap: 2%;
 `;
 
@@ -55,6 +54,10 @@ const ItemLink = styled.a`
   display: flex;
   gap: 10px;
   align-items: center;
+
+  @media screen and (max-width: 950px){
+    font-size: 20px;
+  }
 `;
 
 const ItemNum = styled.p`
