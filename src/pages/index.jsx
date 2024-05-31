@@ -7,7 +7,7 @@ import About from "./about";
 export default function Home() {
   return (
     <DefaultLayout>
-      <Header />
+      <Header $displaymenuwhite={'block'} $displaymenupurple={'none'} $position={'absolute'} />
       <Main />
     </DefaultLayout>
   );

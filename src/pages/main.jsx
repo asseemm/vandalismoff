@@ -7,18 +7,13 @@ import ProsBlock from "@/components/organisms/ProsBlock";
 import Questions from "@/components/organisms/Questions";
 import Feedback from "@/components/organisms/Feedback";
 import News from "@/components/organisms/News";
+import MainBlock from "@/components/organisms/MainBlock";
 // import Team from "@/components/organisms/Team";
+
+import VideoLink from "@/assets/video/van.mp4";
 
 const Content = styled.section`
   // padding-top: 80vh;
-`;
-
-const MainBlock = styled.div`
-  padding-top: 100vh;
-
-  @media screen and (max-width: 800px){
-    padding-top: 40vh;
-  }
 `;
 
 export default function Main() {

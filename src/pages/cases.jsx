@@ -18,7 +18,7 @@ const Content = styled.section`
 export default function Cases() {
 return (
     <DefaultLayout>
-        <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} displayMenuPurple={'none'}/>
+        <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} $displaymenupurple={'none'}/>
         <Content>
             <BlockTitle title="Наши кейсы" description="Тут собрана вся наша проделанная работа" />
         </Content>
