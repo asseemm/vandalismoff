@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Image from 'next/image';
 import BlockTitle from '../atoms/BlockTitle';
 
@@ -17,8 +17,7 @@ const BlockStyle = styled.div`
     }
 `;
 
-const BlockContent = styled.div`
-`;
+const BlockContent = styled.div``;
 
 const ProsBlocks = styled.div`
     max-width: 100%;
@@ -90,7 +89,7 @@ const ReasonText = styled.p`
     }
 `;
 
-const ProsBtn= styled.button`
+const ProsBtn = styled.button`
     position: absolute;
     bottom: 0;
     left: 2%;
@@ -103,8 +102,21 @@ const ProsBtn= styled.button`
     cursor: pointer;
 `;
 
-const VectorImg= styled(Image)`
+const VectorImg = styled(Image)`
     height: 20px;
+`;
+
+const fadeIn = keyframes`
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        color: #777;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        color: #333;
+    }
 `;
 
 const ProsText = styled.p`
@@ -117,6 +129,7 @@ const ProsText = styled.p`
     margin: 0 5%;
     margin-top: 40px;
     display: ${props => props.$show ? 'block' : 'none'};
+    animation: ${props => props.$show ? fadeIn : 'none'} 0.7s ease-in-out;
 
     @media screen and (max-width: 640px) {
         font-size: 18px;

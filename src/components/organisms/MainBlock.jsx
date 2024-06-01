@@ -25,7 +25,7 @@ const BlockContent = styled.div`
   }
 
   @media screen and (max-width: 550px){
-    height: 65vh;
+    height: 64vh;
   }
 `;
 
@@ -47,7 +47,7 @@ const VideoBackground = styled.video`
   }
 
   @media screen and (max-width: 550px){
-    height: 65vh;
+    height: 64vh;
   }
 `;
 
@@ -63,7 +63,7 @@ const MainContent = styled.div`
   }
 
   @media screen and (max-width: 550px){
-    padding-top: 18vh;
+    padding-top: 15vh;
   }
 `;
 
@@ -86,7 +86,7 @@ const Title = styled.h1`
   }
 
   @media screen and (max-width: 550px){
-    font-size: 36px;
+    font-size: 32px;
   }
 `;
 

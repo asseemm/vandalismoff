@@ -31,10 +31,11 @@ const CloseButton = styled.button`
 `;
 
 const MenuContent = styled.ul`
+  display: grid;
   padding: 12%;
   float: right;
   width: 70%;
-  height: 100%;
+  // height: 100%;
   gap: 2%;
 `;
 

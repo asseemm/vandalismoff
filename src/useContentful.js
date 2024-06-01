@@ -11,14 +11,16 @@ const useContentful = () => {
     try {
       const entries = await client.getEntries({
         content_type: "cases",
-        select: "fields.caseTitle,fields.caseSubtitle,fields.caseText"
+        select: "fields.caseTitle,fields.caseVideo,fields.caseSubtitle,fields.caseText"
       });
 
       const cases = entries.items.map((item) => {
         return {
+          id: item.sys.id,  
           title: item.fields.caseTitle || "No title",
+          video: item.fields.caseVideo || "No video",
           subtitle: item.fields.caseSubtitle || "No subtitle",
-          text: item.fields.caseText?.content?.[0]?.content?.[0]?.value || "No content"
+          text: item.fields.caseText?.content?.[0]?.content?.[0]?.value || "No content",
         };
       });
 
