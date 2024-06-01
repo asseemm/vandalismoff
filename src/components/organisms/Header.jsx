@@ -19,6 +19,10 @@ const HeaderContent = styled.div`
   padding: 60px 10%;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 550px){
+    padding: 40px 10%;
+  }
 `;
 
 const Logo = styled.p`
@@ -40,6 +44,10 @@ const ToggleButton = styled.button`
 
   @media screen and (max-width: 700px){
     width: 30px;
+
+    svg{
+      width: 100%;
+    }
   }
 
   @keyframes bounce {
