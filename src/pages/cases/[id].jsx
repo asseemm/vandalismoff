@@ -61,7 +61,7 @@ export default function Case({ caseItem }) {
             width='100%'
             height='100%'
             playing={true}
-            light={false} // Убедитесь, что light mode выключен, если хотите, чтобы видео сразу начало воспроизводиться
+            light={false}
           />
         </VideoContainer>
         <Title>{caseTitle}</Title>

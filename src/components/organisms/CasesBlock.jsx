@@ -109,8 +109,8 @@ const CaseLink= styled.a`
   text-transform: uppercase;
   float: right;
 
-  @media screen and (max-width: 1250px) {
-    width: 100%;
+  @media screen and (max-width: 550px) {
+    display: none;
   }
 `;
 

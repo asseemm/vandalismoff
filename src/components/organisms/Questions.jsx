@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
-
 import BlockTitle from '../atoms/BlockTitle';
 import { colors } from '../base/colors';
 
@@ -12,12 +10,12 @@ const Content = styled.section`
   padding: 80px 10%;
 
   @media screen and (max-width: 650px) {
-      padding: 40px 10%;
+    padding: 40px 10%;
   }
 `;
 
 const SectionQuestion = styled.section`
-    margin-top: 40px;
+  margin-top: 40px;
 `;
 
 const Article = styled.article`
@@ -39,8 +37,16 @@ const QuestionTitle = styled.div`
   font-weight: bold;
   font-size: 22px;
 
+  p{
+    max-width: 90%;
+  }
+
   @media screen and (max-width: 500px) {
-    font-size: 16px;
+    font-size: 14px;
+
+    p{
+      max-width: 260px;
+    }
   }
 `;
 
@@ -73,14 +79,26 @@ const Button = styled.button`
 `;
 
 const QuestionText = styled.div`
-  display: none;
+  overflow: hidden;
+  transform-origin: top;
+  transition: transform 0.7s ease, visibility 0.7s ease;
+  height: 0;
+  visibility: hidden;
   margin-top: 30px;
   font-family: "Jost", sans-serif;
   font-size: 17px;
   width: 95%;
 
   &.open {
-    display: block;
+    transform: scaleY(1);
+    visibility: visible;
+    height: auto;
+  }
+
+  &.closed {
+    transform: scaleY(0);
+    visibility: hidden;
+    height: 0; 
   }
 
   @media screen and (max-width: 500px) {
@@ -97,7 +115,7 @@ const Line = styled.div`
   opacity: 10%;
   margin-top: 15px;
 `;
-
+ 
 const FAQ = ({ faqData }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -119,7 +137,7 @@ const FAQ = ({ faqData }) => {
                     </Button>
                     </QuestionTitle>
                     <Line />
-                    <QuestionText className={openIndex === index ? 'open' : ''}>
+                    <QuestionText className={openIndex === index ? 'open' : 'closed'}>
                     {item.answer}
                     </QuestionText>
                 </Article>

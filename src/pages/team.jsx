@@ -53,13 +53,8 @@ const TeamCard = styled.div`
   }
 
   @media screen and (max-width: 550px) {
-    width: 45%;
-  }
-
-  @media screen and (max-width: 360px) {
-    width: 80%;
-    margin-left: 10%;
-    height: 300px;
+    width: 100%;
+    height: 350px;
     margin-top: 20px;
   }
 `;
@@ -88,7 +83,7 @@ const CardInfo = styled.div`
   @media screen and (max-width: 1100px) {
     bottom: -70px;
   }
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 550px) {
     bottom: -40px;
   }
 
@@ -106,8 +101,8 @@ const CardTitle = styled.h3`
     font-size: 12px;
     margin: 8px 0;
   }
-  @media screen and (max-width: 360px) {
-    font-size: 15px;
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
   }
 `;
 
@@ -119,13 +114,6 @@ const CardRole = styled.p`
     font-size: 14px;
   }
   @media screen and (max-width: 800px) {
-    font-size: 10px;
-  }
-
-  @media screen and (max-width: 500px) {
-    font-size: 6px;
-  }
-  @media screen and (max-width: 360px) {
     font-size: 12px;
   }
 `;
@@ -149,12 +137,7 @@ const SocialIcon = styled.div`
     width: 18px;  
     height: 18px; 
   }
-  @media screen and (max-width: 500px) {
-    width: 14px;  
-    height: 14px; 
-  }
-
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 550px) {
     width: 22px;  
     height: 22px; 
   }
@@ -252,7 +235,7 @@ const TeamPage = () => {
 export default function Team() {
   return (
     <DefaultLayout>
-      <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} $displayMenuPurple={'none'}/>
+      <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} $displaymenupurple={'none'}/>
       <Content>
         <BlockTitle title="Наша  команда" description="Борцы против вандализма"/>
         <TeamPage />
