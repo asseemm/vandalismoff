@@ -251,22 +251,22 @@ export default function About() {
                 </div>
                 <div className="history-steps">
                   <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} /></div>
+                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году"  width={500} height={300} /></div>
                     <p className="year">2003</p>
                     <p className="text">Внедрение в рынок</p>
                   </div>
                   <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} /></div>
+                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году"  width={500} height={300} /></div>
                     <p className="year">2008</p>
                     <p className="text">Ребрендинг</p>
                   </div>
                   <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} /></div>
+                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году"  width={500} height={300} /></div>
                     <p className="year">2022</p>
                     <p className="text">Расширение</p>
                   </div>
                   <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} /></div>
+                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году"   width={500} height={300} /></div>
                     <p className="year">2022</p>
                     <p className="text">Расширение</p>
                   </div>
