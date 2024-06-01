@@ -214,7 +214,7 @@ const PhilosophySection = styled.div`
 export default function About() {
   return (
     <DefaultLayout>
-      <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} displayMenuPurple={'none'}/>
+      <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} $displaymenupurple={'none'}/>
       <Container>
         <Content>
           <div className="start">

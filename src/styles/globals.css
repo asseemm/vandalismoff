@@ -101,3 +101,50 @@ span .text p{
   opacity: 0.3;
   background-color: #804988;
 }
+
+
+.circle-btn{
+  margin-top: 3%;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: url('../assets/img/circlein.png') no-repeat center/cover;
+  object-fit: contain;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/img/circlebtn.png') no-repeat center/cover;
+    animation: rotate 15s linear infinite;
+  }
+
+  @media screen and (max-width: 950px){
+    width: 200px;
+    height: 200px;
+  }
+
+  @media screen and (max-width: 550px){
+    width: 150px;
+    height: 150px;
+  }
+
+}
+    
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

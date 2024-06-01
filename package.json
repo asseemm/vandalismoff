@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev": "cross-env NODE_OPTIONS=--max-old-space-size=4096 next dev"
   },
   "dependencies": {
     "@sanity/client": "^6.18.0",
@@ -16,6 +17,7 @@
     "js-cookie": "^3.0.5",
     "next": "^14.2.3",
     "next-sanity": "^7.1.4",
+    "next-videos": "^1.4.1",
     "react": "^18",
     "react-dom": "^18",
     "react-player": "^2.16.0",
