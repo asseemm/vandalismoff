@@ -27,16 +27,41 @@ const TeamContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  height: 50vh;
+  height: auto;
   margin-top: 5%;
+  
+  
 `;
 
 const TeamCard = styled.div`
-//    display: grid;
   position: relative;
   width: 22%;
-  height: 100%;
+  height: 50vh;
   background-color: #ccc;
+  margin-bottom: 80px;
+
+  @media screen and (max-width: 1100px) {
+    height: 40vh;
+  }
+
+  @media screen and (max-width: 800px) {
+    height: 30vh;
+  }
+  
+  @media screen and (max-width: 750px) {
+    width: 30%;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 45%;
+  }
+
+  @media screen and (max-width: 360px) {
+    width: 80%;
+    margin-left: 10%;
+    height: 300px;
+    margin-top: 20px;
+  }
 `;
 
 const TeamImg = styled.div`
@@ -60,18 +85,49 @@ const CardInfo = styled.div`
   padding: 5%;
   text-align: center;
   border-radius: 3px;
-  // box-shadow: 1px 1px 3px 1px #e2d7e7`;
+  @media screen and (max-width: 1100px) {
+    bottom: -70px;
+  }
+  @media screen and (max-width: 360px) {
+    bottom: -40px;
+  }
+
+
+  `;
 
 const CardTitle = styled.h3`
   font-family: "Jost", sans-serif;
   margin: 10px 0;
   color: #333;
+  @media screen and (max-width: 1100px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+    margin: 8px 0;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 15px;
+  }
 `;
 
 const CardRole = styled.p`
   color: #666;
   font-family: "Jost", sans-serif;
   margin-bottom: 15px;
+  @media screen and (max-width: 1100px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 10px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 6px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 12px;
+  }
 `;
 const SocialIcons = styled.div`
   display: flex; 
@@ -84,15 +140,33 @@ const SocialIcons = styled.div`
 const SocialIcon = styled.div`
   width: 26px;  
   height: 26px; 
+  @media screen and (max-width: 1100px) {
+    width: 22px;  
+    height: 22px; 
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 18px;  
+    height: 18px; 
+  }
+  @media screen and (max-width: 500px) {
+    width: 14px;  
+    height: 14px; 
+  }
+
+  @media screen and (max-width: 360px) {
+    width: 22px;  
+    height: 22px; 
+  }
 `;
 
 
 const TeamPage = () => {
   return (
     <TeamContainer>
-      <TeamCard key="Наг Рейнольдс">
+      <TeamCard key="Наг ">
         <TeamImg>
-           <Img src={Van3} alt='img' />
+           <Img src={Van3} alt='img' priority />
         </TeamImg>
         <CardInfo>
             <CardTitle>Наг Рейнольдс</CardTitle>
@@ -110,7 +184,7 @@ const TeamPage = () => {
             </SocialIcons>
         </CardInfo>
       </TeamCard>
-      <TeamCard key="Наг Рейнольдс">
+      <TeamCard key=" Рейнольдс">
         <TeamImg>
            <Img src={Van3} alt='img' />
         </TeamImg>
@@ -130,9 +204,9 @@ const TeamPage = () => {
             </SocialIcons>
         </CardInfo>
       </TeamCard>
-      <TeamCard key="Наг Рейнольдс">
+      <TeamCard key="Наг Рейльдс">
         <TeamImg>
-           <Img src={Van3} alt='img' />
+           <Img src={Van3} alt='img' priority />
         </TeamImg>
         <CardInfo>
             <CardTitle>Наг Рейнольдс</CardTitle>
@@ -150,9 +224,9 @@ const TeamPage = () => {
             </SocialIcons>
         </CardInfo>
       </TeamCard>
-      <TeamCard key="Наг Рейнольдс">
+      <TeamCard key="Наг Рейнльдс">
         <TeamImg>
-           <Img src={Van3} alt='img' />
+           <Img src={Van3} alt='img' priority />
         </TeamImg>
         <CardInfo>
             <CardTitle>Наг Рейнольдс</CardTitle>
