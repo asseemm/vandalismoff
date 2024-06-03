@@ -6,6 +6,8 @@ import Header from "@/components/organisms/Header";
 import Image from 'next/image';
 
 import Van2 from '@/assets/img/van2.JPG'
+import { GoalSVG } from '@/assets/icon/GoalSVG';
+
 
 
 const Content = styled.section`
@@ -15,7 +17,7 @@ const Content = styled.section`
 
 const Container = styled.div`
   .start {
-    padding: 150px 10%;
+    padding: 80px 10%;
     @media screen and (max-width: 650px) {
         padding: 40px 10%;
     }
@@ -91,19 +93,24 @@ const Container = styled.div`
   }
   
   .title-top p {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 26px;
-    margin: 0; /* Уберите отступы */
+    margin: 0; 
+
+    @media screen and (max-width: 500px) {
+      font-size: 18px; 
+    }
   }
   
   .text p {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
-    line-height: 23px;
+    line-height: 29px;
     color: #777;
     margin-top: 3%;
-    width: 90%;
+    width: 100%;
+    font-family: "Jost", sans-serif;
 
     @media screen and (max-width: 1250px) {
       font-size: 16px;
@@ -114,28 +121,32 @@ const Container = styled.div`
     color:  #804988;
   }
   .title-left {
-    font-size: 35px; 
+    font-size: 40px; 
     padding: 20px 0px 20px 0px;
     color:  #000;
     text-transform: uppercase;
     font-family: "Jost", sans-serif;
+
+    @media screen and (max-width: 500px) {
+      font-size: 25px; 
+    }
+    
   }
   
 `;
 
 const HistorySection = styled.div`
-  // padding-top: 5%;
-  // padding-bottom: 5%;
   position: relative;
-
-  .background{
+  
+  .goalBackr{
     width: 100%;
-    position: absolute;
+    height: 200px;  
+    background: rgba(128, 73, 136, 0.5);    position: absolute;
     top: 0;
-    background: #804988;
-    height: 40vh;
-    z-index; 1;
+    height: 50vh;
+    z-index: 5;
   }
+  
   
   .container{
     padding: 80px 10%;
@@ -147,6 +158,9 @@ const HistorySection = styled.div`
   }
 
   .history-cont {
+    margin-left: 13%;
+    margin-right: 13%;
+
     @media screen and (max-width: 750px) {
       margin-left: 0;
       margin-right: 0;
@@ -170,7 +184,7 @@ const HistorySection = styled.div`
     color: #fff;
   }
   .step {
-    width: 22%;
+    width: 30%;
 
     @media screen and (max-width: 750px) {
       width: 60%;
@@ -179,11 +193,11 @@ const HistorySection = styled.div`
   }
   .img {
     width: 100%;
-    height: 27vh;
+    height: 32vh;
     background-color: #c2c2c2;
 
     @media screen and (max-width: 750px) {
-      height: 35vh;
+      height: 35h;
     }
   }
   .img img {
@@ -191,20 +205,23 @@ const HistorySection = styled.div`
     height: 100%;
   }
   .year {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 34px;
     letter-spacing: 0.06em;
     margin-top: 10%;
     margin-bottom: 3%;
+    color: #804988;
   }
   .text {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 26px;
     color: #999;
+    color: #804988;
   }
 `;
+
 
 const PhilosophySection = styled.div`
   padding-top: 0%;
@@ -242,7 +259,9 @@ export default function About() {
             </div>
           </div>
           <HistorySection>
-            <div className="background"></div>
+            <div className="goalBackr">
+            </div>
+               <div className="background-about"></div>
             <div className="container">
               <div className="history-cont">
                     <div className="block-head" data-aos="zoom-in">
@@ -251,22 +270,17 @@ export default function About() {
                 </div>
                 <div className="history-steps">
                   <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году"  width={500} height={300} /></div>
-                    <p className="year">2003</p>
-                    <p className="text">Внедрение в рынок</p>
-                  </div>
-                  <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году"  width={500} height={300} /></div>
+                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} priority /></div>
                     <p className="year">2008</p>
                     <p className="text">Ребрендинг</p>
                   </div>
                   <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году"  width={500} height={300} /></div>
+                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} priority /></div>
                     <p className="year">2022</p>
                     <p className="text">Расширение</p>
                   </div>
                   <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году"   width={500} height={300} /></div>
+                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} priority /></div>
                     <p className="year">2022</p>
                     <p className="text">Расширение</p>
                   </div>

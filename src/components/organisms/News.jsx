@@ -29,7 +29,7 @@ const NewsCard = styled.div`
     font-size: 18px;
     line-height: 120%;
     color: #606060;
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   .line {
@@ -53,6 +53,15 @@ const NewsCard = styled.div`
   @media (max-width: 768px) {
     width: 90%;
     margin: 20px 0;
+  }
+
+  @media (max-width: 400px) {
+
+    p {
+      font-size: 16px;
+      line-height: 120%;
+      margin-top: 25px;
+    }
   }
 `;
 
@@ -112,9 +121,20 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
+  autoplay: true,  
+  autoplaySpeed: 3000,  
   responsive: [
     {
-      breakpoint: 0,
+      breakpoint: 1024, // Для планшетов и меньше
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 500, // Для мобильных устройств
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -124,6 +144,17 @@ const settings = {
     }
   ]
 };
+
+
+
+const NewsTitle = styled.h2`
+  font-family: 'Jost', sans-serif;
+  font-size: 23px;
+  color: #302733;
+  margin: 20px 0 0px 0;
+`;
+
+
 
 const posts = [
   {
@@ -162,6 +193,7 @@ const News = () => {
                       <Image key={image.path} src={image.path} alt="News" layout="responsive" width={500} height={300} />
                   ))}
                   </NewsImage>
+                  <NewsTitle>{post.title}</NewsTitle> 
                   <p>{post.excerpt}</p>
                   <div className="line"></div>
                   <div className="underline">
