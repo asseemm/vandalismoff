@@ -8,7 +8,7 @@ import Questions from "@/components/organisms/Questions";
 import Feedback from "@/components/organisms/Feedback";
 import News from "@/components/organisms/News";
 import MainBlock from "@/components/organisms/MainBlock";
-// import Team from "@/components/organisms/Team";
+import Team from "@/components/organisms/Team";
 
 import VideoLink from "@/assets/video/van.mp4";
 
@@ -23,7 +23,7 @@ export default function Main() {
       <AboutBlock />
       <GoalsBlock />
       <CasesBlock />
-      {/* <Team/> */}
+      <Team/>
       <News/>
       <ProsBlock />
       <Questions />

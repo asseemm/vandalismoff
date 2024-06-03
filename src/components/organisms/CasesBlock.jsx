@@ -6,7 +6,9 @@ import ReactPlayer from 'react-player';
 import useContentful from '@/useContentful';
 import Link from 'next/link';
 
-const ReactPlayerLazy = lazy(() => import('react-player'));
+import dynamic from 'next/dynamic';
+
+const ReactPlayerLazy = dynamic(() => import('react-player'), { ssr: false });
 
 const BlockStyle = styled.div`
   max-width: 100%;
@@ -28,6 +30,7 @@ const CaseCard = styled.div`
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-between;
+  cursor: pointer;
 `;
 
 const CardContent = styled.div`
@@ -108,6 +111,7 @@ const CaseLink= styled.a`
   color: #804988;
   text-transform: uppercase;
   float: right;
+  margin-right: 20px;
 
   @media screen and (max-width: 550px) {
     display: none;
@@ -154,7 +158,7 @@ const CasesBlock = () => {
               </CaseVideo>
               <CaseInfo>
                 <BlockTitle title={caseItem.title} description={caseItem.subtitle}></BlockTitle>
-                <CaseText>{caseItem.text}</CaseText>
+                <CaseText>{caseItem.shortText}</CaseText>
                 <Link href={`/cases/${caseItem.id}`} legacyBehavior>
                   <CaseLink>
                     <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
