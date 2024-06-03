@@ -25,7 +25,7 @@ export const SocialIcons = styled.div`
   bottom: 0;
   z-index: 10;
   margin-bottom: 40px;
-  margin-right: 2%;
+  margin-right: 10px;
 `;
 
 export const SocialIcon = styled.div`

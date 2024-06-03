@@ -37,6 +37,11 @@ const MenuContent = styled.ul`
   width: 70%;
   // height: 100%;
   gap: 2%;
+
+  @media screen and (max-width: 450px){
+    display: block;
+    width: 90%;
+  }
 `;
 
 const MenuItem = styled.li`
