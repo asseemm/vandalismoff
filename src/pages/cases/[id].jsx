@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { useRouter } from 'next/router';
 import { createClient } from 'contentful';
 import styled from 'styled-components';
+import ReactPlayer from 'react-player';
 import DefaultLayout from "@/components/templates/defaultLayout";
 import Header from "@/components/organisms/Header";
-import ReactPlayer from 'react-player/lazy'; // Используем lazy версию для оптимизации загрузки
+import BlockTitle from '@/components/atoms/BlockTitle';
+
+import dynamic from 'next/dynamic';
+
+const ReactPlayerLazy = dynamic(() => import('react-player'), { ssr: false });
 
 const CaseContainer = styled.div`
   max-width: 100%;
@@ -16,25 +21,41 @@ const CaseContainer = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  font-size: 2rem;
-  margin-bottom: 1rem;
-`;
+const CaseCont = styled.div`
+  padding: 0 10%;
 
-const Subtitle = styled.h2`
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  @media screen and (max-width: 1050px) {
+    padding: 0;
+  }
 `;
 
 const Text = styled.p`
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 30px;
+
+  @media screen and (max-width: 650px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 `;
 
 const VideoContainer = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 400px;
+  height: 600px;
+
+  @media screen and (max-width: 1050px) {
+    height: 400px;
+  }
+
+  @media screen and (max-width: 650px) {
+    height: 250px;
+  }
+`;
+
+const CaseInfo = styled.div`
+  padding: 5% 0;
 `;
 
 export default function Case({ caseItem }) {
@@ -54,20 +75,67 @@ export default function Case({ caseItem }) {
     <DefaultLayout>
       <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} $displaymenupurple={'none'}/>
       <CaseContainer>
-        <VideoContainer>
-          <ReactPlayer
-            url={caseVideo}
-            controls
-            width='100%'
-            height='100%'
-            playing={true}
-            light={false}
-          />
-        </VideoContainer>
-        <Title>{caseTitle}</Title>
-        <Subtitle>{caseSubtitle}</Subtitle>
-        <Text>{caseText?.content?.[0]?.content?.[0]?.value}</Text>
+        <CaseCont>
+          <VideoContainer>
+            <ReactPlayer
+              url={caseVideo}
+              controls
+              width='100%'
+              height='100%'
+              light={false}
+            />
+          </VideoContainer>
+          <CaseInfo>
+            <BlockTitle title={caseTitle} description={caseSubtitle} />
+            <Text>{caseText?.content?.[0]?.content?.[0]?.value}</Text>
+          </CaseInfo>
+        </CaseCont>
       </CaseContainer>
     </DefaultLayout>
   );
+}
+
+export async function getStaticPaths() {
+  const client = createClient({
+    space: "pkaakjur9k42",
+    accessToken: "9Qukq37zHQMy6RCvhjKbPPQnZndOyc3Cfif7LPSheFk",
+    host: "preview.contentful.com"
+  });
+
+  const entries = await client.getEntries({
+    content_type: "cases"
+  });
+
+  const paths = entries.items.map((item) => ({
+    params: { id: item.sys.id },
+  }));
+
+  return {
+    paths,
+    fallback: true,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const client = createClient({
+    space: "pkaakjur9k42",
+    accessToken: "9Qukq37zHQMy6RCvhjKbPPQnZndOyc3Cfif7LPSheFk",
+    host: "preview.contentful.com"
+  });
+
+  let caseItem = null;
+
+  try {
+    const entry = await client.getEntry(params.id);
+    caseItem = entry || null;
+  } catch (error) {
+    console.error(`Error fetching caseItem: ${error}`);
+  }
+
+  return {
+    props: {
+      caseItem,
+    },
+    revalidate: 10,
+  };
 }

@@ -150,12 +150,12 @@
           </AboutInfo>
           <AboutImages>
             <ImagesColumn>
-              <AboutImage><AboutImg src={Van3} alt='img' /></AboutImage>
-              <AboutImage><AboutImg src={Van1} alt='img' /></AboutImage>
+              <AboutImage><AboutImg src={Van3} alt='img' priority /></AboutImage>
+              <AboutImage><AboutImg src={Van1} alt='img' priority /></AboutImage>
             </ImagesColumn>
             <SecondColumn>
-              <AboutImage><AboutImg src={Van2} alt='img' /></AboutImage>
-              <AboutImage><AboutImg src={Van4} alt='img' /></AboutImage>
+              <AboutImage><AboutImg src={Van2} alt='img' priority /></AboutImage>
+              <AboutImage><AboutImg src={Van4} alt='img' priority /></AboutImage>
             </SecondColumn>
           </AboutImages>
         </BlockContent>
