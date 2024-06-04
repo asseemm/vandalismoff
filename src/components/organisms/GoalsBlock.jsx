@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import BlockTitle from '../atoms/BlockTitle';
 import Image from 'next/image';
 
-import { GoalSVG } from '@/assets/icon/GoalSVG';
 import Vision from '@/assets/icon/Vision.png'
+import Kraska from '@/assets/icon/aerosol-can.png'
+import Respon from '@/assets/icon/social-responsibility.png'
+import  Comfort from '@/assets/icon/friendship.png'
 
 
 const BlockStyle = styled.div`
@@ -83,6 +85,8 @@ const GoalContent = styled.div`
 const GoalIcon = styled.div`
     width: 40%;
     margin: 0 30%;
+    display: flex;
+    justify-content: center;
 
     @media screen and (max-width: 800px){
         width: 30%;
@@ -93,7 +97,21 @@ const GoalIcon = styled.div`
         width: 20%;
         margin: 0;
     }
+
 `;
+
+const GoalIconImg = styled.div`
+    width: 80px;
+    height: 80px;
+    position: relative;
+`;
+const GoalIconImgVis = styled.div`
+    width: 70px;
+    height: 70px;
+    position: relative;
+`;
+
+
 
 const GoalInfo = styled.div`
     display: grid;
@@ -107,14 +125,15 @@ const GoalInfo = styled.div`
     }
 `;
 
+
 const GoalTitle = styled.p`
     font-family : "Jost", sans-serif;
-    font-size: 24px;
+    font-size: 23px;
     line-height: 28px;
     color: #222;
 
     @media screen and (max-width: 1580px){
-        font-size: 22px;
+        font-size: 21px;
         line-height: 26px;
     }
 
@@ -126,7 +145,7 @@ const GoalTitle = styled.p`
 
 const GoalDesc = styled.p`
     font-family : "Jost", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
     color: #222;
 
@@ -140,7 +159,7 @@ const GoalDesc = styled.p`
         line-height: 18px;
     }
 `;
-
+ 
 const GoalsBlock = () => {
   return (
     <BlockStyle id='goalsblock'>
@@ -151,7 +170,7 @@ const GoalsBlock = () => {
             <GoalBLock>
                 <GoalContent>
                     <GoalIcon>
-                    <GoalSVG />
+                    <Image src={Vision} alt="Визион" width={100} height={100} />
                     </GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Изменить мышление общества</GoalTitle>
@@ -161,7 +180,7 @@ const GoalsBlock = () => {
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon><GoalSVG /></GoalIcon>
+                    <GoalIcon></GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Противодействовать актам вандализма</GoalTitle>
                         <GoalDesc>Снизить количество случаев вандализма в нашей стране.</GoalDesc>
@@ -170,7 +189,11 @@ const GoalsBlock = () => {
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon><GoalSVG /></GoalIcon>
+                    <GoalIcon>
+                        <GoalIconImg>
+                        <Image src={Respon} alt="Визион" layout="fill" objectFit="contain" />
+                        </GoalIconImg>
+                    </GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Пробудить отвественность</GoalTitle>
                         <GoalDesc>Призвать людей к ответственности за свои действия и нарушения.</GoalDesc>
@@ -179,7 +202,11 @@ const GoalsBlock = () => {
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon><GoalSVG /></GoalIcon>
+                    <GoalIcon>
+                        <GoalIconImg>
+                            <Image src={Comfort} alt="Визион" layout="fill" objectFit="contain" />
+                        </GoalIconImg>
+                    </GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Жить в комфортной стране</GoalTitle>
                         <GoalDesc>Перестать создавать дискомфорт своему же городу и стране.</GoalDesc>
