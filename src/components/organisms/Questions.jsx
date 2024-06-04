@@ -124,7 +124,7 @@ const FAQ = ({ faqData }) => {
   };
 
   return (
-    <Content>
+    <Content  id='questions'>
         <BlockTitle title="Ваш часто задаваемый вопрос" description="вопросы, которые задают многие с ответами" />        
         <SectionQuestion>
             <div>
