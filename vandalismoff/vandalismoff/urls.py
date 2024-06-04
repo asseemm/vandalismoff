@@ -16,17 +16,18 @@ Including another URLconf
 """
 
 from django.urls import path
-from myapp.views import feedback_create
+from myapp.views import feedback_create, feedbacks_list, export_feedbacks_csv
 from django.http import HttpResponse
 from django.contrib import admin
 from django.urls import path, include 
+from django.shortcuts import redirect
 
 def home(request):
     return HttpResponse("Welcome to the homepage!")
 
-
 urlpatterns = [
+    path('', lambda request: redirect('feedbacks_list'), name='home'),
     path('api/feedback/', feedback_create, name='feedback_create'),
-    path('admin/', admin.site.urls),
-    path('', home, name='home'),
+    path('feedbacks/', feedbacks_list, name='feedbacks_list'),
+    path('export-csv/', export_feedbacks_csv, name='export_feedbacks_csv'),
 ]

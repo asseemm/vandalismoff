@@ -149,7 +149,7 @@ const MainBlock = () => {
             <TextLine />
             <Subtitle>Группа активистов молодежного <br /> движения "Жана Адамдар"</Subtitle>
           </HInfo>
-            <a href="/">
+            <a href="/#feedback">
                 <div className='circle-btn'></div>
             </a>
         </MainContent>

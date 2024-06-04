@@ -13,6 +13,10 @@
     max-width: 100%;
     height: auto; 
     padding: 120px 10%;
+
+    @media screen and (max-width: 650px){
+      padding: 60px 10%;
+    }
   `;
 
   const BlockContent = styled.div`

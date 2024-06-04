@@ -4,7 +4,7 @@ import BlockTitle from '../atoms/BlockTitle';
 import Image from 'next/image';
 
 import { GoalSVG } from '@/assets/icon/GoalSVG';
-import {Vision} from '@/assets/icon/Vision.png'
+import Vision from '@/assets/icon/Vision.png'
 
 
 const BlockStyle = styled.div`
@@ -151,7 +151,7 @@ const GoalsBlock = () => {
             <GoalBLock>
                 <GoalContent>
                     <GoalIcon>
-                    <Image src={Vision} alt="Визион" width={100} height={100} />
+                    <GoalSVG />
                     </GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Изменить мышление общества</GoalTitle>
@@ -161,7 +161,7 @@ const GoalsBlock = () => {
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon></GoalIcon>
+                    <GoalIcon><GoalSVG /></GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Противодействовать актам вандализма</GoalTitle>
                         <GoalDesc>Снизить количество случаев вандализма в нашей стране.</GoalDesc>
