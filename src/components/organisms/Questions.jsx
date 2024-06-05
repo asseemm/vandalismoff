@@ -130,14 +130,14 @@
               <div>
                   {faqData.map((item, index) => (
                   <Article key={index}>
-                      <QuestionTitle>
+                      <QuestionTitle data-aos="fade-up">
                       <p>{item.ques}</p>
-                      <Button onClick={() => toggleQuestion(index)} className={openIndex === index ? 'open' : ''}>
+                      <Button onClick={() => toggleQuestion(index)} className={openIndex === index ? 'open' : ''} data-aos="fade-up">
                           {openIndex === index ? '-' : '+'}
                       </Button>
                       </QuestionTitle>
-                      <Line />
-                      <QuestionText className={openIndex === index ? 'open' : 'closed'}>
+                      <Line data-aos="fade-up" />
+                      <QuestionText className={openIndex === index ? 'open' : 'closed'} data-aos="fade-up">
                       {item.answer}
                       </QuestionText>
                   </Article>

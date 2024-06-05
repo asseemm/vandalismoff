@@ -186,15 +186,15 @@ export default function News() {
                     {posts.map(post => (
                       <NewsCard key={post.id}>
                         <NewsContent>
-                          <NewsImage>
+                          <NewsImage data-aos="fade-up">
                             {post.featured_images.map(image => (
                                 <Image key={image.path} src={image.path} alt="News" layout="responsive" width={500} height={300} />
                             ))}
                           </NewsImage>
-                          <NewsTitle>{post.title}</NewsTitle> 
-                          <p>{post.excerpt}</p>
-                          <div className="line"></div>
-                          <div className="underline">
+                          <NewsTitle data-aos="fade-up">{post.title}</NewsTitle> 
+                          <p data-aos="fade-up">{post.excerpt}</p>
+                          <div className="line" data-aos="fade-up"></div>
+                          <div className="underline" data-aos="fade-up">
                               <DateText>{new Date(post.published_at).toLocaleDateString()}</DateText>
                               <Elips>
                                 <SVG>

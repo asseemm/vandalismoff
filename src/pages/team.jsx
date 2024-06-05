@@ -156,9 +156,9 @@ const TeamPage = () => {
             <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </TeamImg>
           <CardInfo>
-            <CardTitle>{member.name}</CardTitle>
-            <CardRole>{member.position}</CardRole>
-            <SocialIcons>
+            <CardTitle data-aos="fade-up">{member.name}</CardTitle>
+            <CardRole data-aos="fade-up">{member.position}</CardRole>
+            <SocialIcons data-aos="fade-up">
               {member.instagram && <SocialIcon as="a" href={member.instagram} target="_blank"><BlackInstagramSVG /></SocialIcon>}
               {member.telegram && <SocialIcon as="a" href={member.telegram} target="_blank"><BlackTelegramSVG /></SocialIcon>}
               {member.email && <SocialIcon as="a" href={`mailto:${member.email}`}><BlackMailSVG /></SocialIcon>}

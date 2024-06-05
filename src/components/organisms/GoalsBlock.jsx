@@ -167,53 +167,53 @@ const GoalsBlock = () => {
           <GoalsCont>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon>
+                    <GoalIcon data-aos="fade-up">
                         <GoalIconImgVis>
                             <Image src={Vision} alt="Визион" layout="fill" objectFit="contain" />
                         </GoalIconImgVis>
                     </GoalIcon>
                     <GoalInfo>
-                        <GoalTitle>Изменить мышление общества</GoalTitle>
-                        <GoalDesc>Исправить старое мышление общества, направив его в правильное русло.</GoalDesc>
+                        <GoalTitle data-aos="fade-up">Изменить мышление общества</GoalTitle>
+                        <GoalDesc data-aos="fade-up">Исправить старое мышление общества, направив его в правильное русло.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon>
+                    <GoalIcon data-aos="fade-up">
                         <GoalIconImg>
                         <Image src={Kraska} alt="Визион" layout="fill" objectFit="contain" />
                         </GoalIconImg>
                     </GoalIcon>
                     <GoalInfo>
-                        <GoalTitle>Противодействовать актам вандализма</GoalTitle>
-                        <GoalDesc>Снизить количество случаев вандализма в нашей стране.</GoalDesc>
+                        <GoalTitle data-aos="fade-up">Противодействовать актам вандализма</GoalTitle>
+                        <GoalDesc data-aos="fade-up">Снизить количество случаев вандализма в нашей стране.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon>
+                    <GoalIcon data-aos="fade-up">
                         <GoalIconImg>
                         <Image src={Respon} alt="Визион" layout="fill" objectFit="contain" />
                         </GoalIconImg>
                     </GoalIcon>
                     <GoalInfo>
-                        <GoalTitle>Пробудить отвественность</GoalTitle>
-                        <GoalDesc>Донести до каждого, что Казахстан - это наша зона ответственности.</GoalDesc>
+                        <GoalTitle data-aos="fade-up">Пробудить отвественность</GoalTitle>
+                        <GoalDesc data-aos="fade-up">Донести до каждого, что Казахстан - это наша зона ответственности.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon>
+                    <GoalIcon data-aos="fade-up">
                         <GoalIconImg>
                             <Image src={Comfort} alt="Визион" layout="fill" objectFit="contain" />
                         </GoalIconImg>
                     </GoalIcon>
                     <GoalInfo>
-                        <GoalTitle>Достичь нового Казахстана</GoalTitle>
-                        <GoalDesc>Перестать создавать дискомфорт своему же городу и стране.</GoalDesc>
+                        <GoalTitle data-aos="fade-up">Достичь нового Казахстана</GoalTitle>
+                        <GoalDesc data-aos="fade-up">Перестать создавать дискомфорт своему же городу и стране.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>

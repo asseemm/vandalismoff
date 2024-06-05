@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { useRouter } from 'next/router';
 import { createClient } from 'contentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player';
 import DefaultLayout from "@/components/templates/defaultLayout";
@@ -87,7 +88,7 @@ export default function Case({ caseItem }) {
           </VideoContainer>
           <CaseInfo>
             <BlockTitle title={caseTitle} description={caseSubtitle} />
-            <Text>{caseText?.content?.[0]?.content?.[0]?.value}</Text>
+            <Text>{documentToReactComponents(caseText)}</Text>
           </CaseInfo>
         </CaseCont>
       </CaseContainer>

@@ -84,9 +84,9 @@ const Line = styled.div`
 const BlockTitle = ({ title, description, $titleColor, $deskColor, $lineColor, $descWidth }) => {
   return (
     <BlockTitleStyle>
-        <TitleText $titleColor={$titleColor}>{title}</TitleText>
-        <TitleDesc $deskColor={$deskColor} $descWidth={$descWidth}>
-            <Line $lineColor={$lineColor} />
+        <TitleText $titleColor={$titleColor} data-aos="fade-up">{title}</TitleText>
+        <TitleDesc $deskColor={$deskColor} $descWidth={$descWidth} data-aos="fade-up">
+            <Line $lineColor={$lineColor} data-aos="fade-up" />
             {description}
         </TitleDesc>
     </BlockTitleStyle>
