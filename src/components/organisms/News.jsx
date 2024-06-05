@@ -185,13 +185,13 @@ const News = () => {
           <NewsCard key={post.id}>
             <a href={post.link} target="_blank" >
             <NewsContent>
-                <NewsImage>
+                <NewsImage data-aos="fade-up">
                   <img src={post.imageLink} alt="News" style={{ width: '100%', height: '100%' }} />
                 </NewsImage>
-                <NewsTitle>{post.title}</NewsTitle>
-                <div>{documentToReactComponents(post.text)}</div> {/* Используйте <div> вместо <p> */}
-                <div className="line"></div>
-                <div className="underline">
+                <NewsTitle data-aos="fade-up">{post.title}</NewsTitle>
+                <div data-aos="fade-up">{documentToReactComponents(post.text)}</div> {/* Используйте <div> вместо <p> */}
+                <div className="line" data-aos="fade-up"></div>
+                <div className="underline" data-aos="fade-up">
                   <DateText>{new Date(post.date).toLocaleDateString()}</DateText>
                   <Elips>
                     <SVG>

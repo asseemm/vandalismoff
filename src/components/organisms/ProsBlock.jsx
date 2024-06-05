@@ -172,10 +172,10 @@ const ProsBlock = () => {
                         <Pros key={index}>
                             <ProsCont>
                                 <ProsBack src={ProsPng} alt="Background" />
-                                <ReasonText>{pros.reason}</ReasonText>
-                                <ProsBtn onClick={() => toggleText(index)}><VectordownSVG /></ProsBtn>
+                                <ReasonText data-aos="fade-up">{pros.reason}</ReasonText>
+                                <ProsBtn onClick={() => toggleText(index)} data-aos="fade-up"><VectordownSVG /></ProsBtn>
                             </ProsCont>
-                            <ProsText $show={showText[index]}>
+                            <ProsText $show={showText[index]} data-aos="fade-up">
                                 {pros.text}
                             </ProsText>
                         </Pros>

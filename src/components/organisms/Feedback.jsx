@@ -156,7 +156,7 @@ function Feedback() {
        <BlockContent>
         <div className='feedback-back'></div>
          <BlockTitle title="Обратная связь" description="Если есть вопросы или предложения мы ждем вас" $titleColor="#fff" $deskColor="#fff" $lineColor="#fff"></BlockTitle>
-         <Form onSubmit={handleSubmit}>
+         <Form onSubmit={handleSubmit} data-aos="fade-up">
            <NameInput type="text" name="name" placeholder="Ваше имя" value={name} onChange={(e) => setName(e.target.value)} required />
            <Line />
            <PhoneInput type="tel" placeholder="+7 ()" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />

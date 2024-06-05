@@ -145,21 +145,21 @@
     return (
       <BlockStyle>
         <BlockContent>
-          <AboutInfo>
+          <AboutInfo data-aos="fade-up">
             <BlockTitle title="Кто мы?" description="Краткое знакомство с нашей командой" />
-            <AboutText>
+            <AboutText data-aos="fade-up">
               Мы, команда VandalismOFF, ежедневно работаем над тем, чтобы противостоять актам вандализма и пропагандировать уважение к общественным пространствам. Вдохновленные общей целью, мы объединились для того, чтобы внести свой вклад в сохранение культурного и градостроительного наследия нашей страны. Наши усилия направлены не только на борьбу с проявлениями вандализма, но и на формирование культуры уважения и бережного отношения к общественным пространствам. Мы проводим образовательные кампании, организуем мероприятия и разрабатываем инициативы, призванные мотивировать жителей к активному участию в улучшении качества жизни в их городах. Наш сайт служит платформой для обмена опытом и успешными практиками, помогая каждому осознать свою роль в создании безопасного и привлекательного городского пространства.
             </AboutText>
-            <MoreButton><a href="/about">Больше</a></MoreButton>
+            <MoreButton data-aos="fade-up"><a href="/about">Больше</a></MoreButton>
           </AboutInfo>
           <AboutImages>
             <ImagesColumn>
-              <AboutImage><AboutImg src={Van3} alt='img' priority /></AboutImage>
-              <AboutImage><AboutImg src={Van1} alt='img' priority /></AboutImage>
+              <AboutImage data-aos="fade-up"><AboutImg src={Van3} alt='img' priority /></AboutImage>
+              <AboutImage data-aos="fade-up"><AboutImg src={Van1} alt='img' priority /></AboutImage>
             </ImagesColumn>
             <SecondColumn>
-              <AboutImage><AboutImg src={Van2} alt='img' priority /></AboutImage>
-              <AboutImage><AboutImg src={Van4} alt='img' priority /></AboutImage>
+              <AboutImage data-aos="fade-up"><AboutImg src={Van2} alt='img' priority /></AboutImage>
+              <AboutImage data-aos="fade-up"><AboutImg src={Van4} alt='img' priority /></AboutImage>
             </SecondColumn>
           </AboutImages>
         </BlockContent>

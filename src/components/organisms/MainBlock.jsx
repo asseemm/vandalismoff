@@ -144,12 +144,12 @@ const MainBlock = () => {
           Your browser does not support the video tag.
         </VideoBackground>
         <MainContent>
-          <Title>ВандализмOFF</Title>
-          <HInfo> 
+          <Title data-aos="fade-up">ВандализмOFF</Title>
+          <HInfo data-aos="fade-up"> 
             <TextLine />
             <Subtitle>Группа активистов молодежного <br /> движения "Жана Адамдар"</Subtitle>
           </HInfo>
-            <a href="/#feedback">
+            <a href="/#feedback" data-aos="fade-up">
                 <div className='circle-btn'></div>
             </a>
         </MainContent>

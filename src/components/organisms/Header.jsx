@@ -20,7 +20,7 @@ const HeaderStyle = styled.header`
 `;
 
 const HeaderContent = styled.div`
-  padding: 60px 10%;
+  padding: ${({ $padding }) => ($padding ? $padding : '30px 10%')};
   display: flex;
   justify-content: space-between;
 
@@ -86,7 +86,7 @@ const MenuWhiteIcon = styled.div`
   display:  ${({ $displaymenuwhite }) => ($displaymenuwhite ? $displaymenuwhite : 'none')}; 
 `;
 
-const Header = ({ $backgroundcolor, color, $displaymenupurple, $displaymenuwhite, $position }) => {
+const Header = ({ $backgroundcolor, color, $displaymenupurple, $displaymenuwhite, $position, $padding }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -95,7 +95,7 @@ const Header = ({ $backgroundcolor, color, $displaymenupurple, $displaymenuwhite
 
   return (
     <HeaderStyle $backgroundcolor={$backgroundcolor} $position={$position}>
-      <HeaderContent>
+      <HeaderContent $padding={$padding} >
         <Logo >
         <Img src={logo1} alt='img' priority />
         </Logo>
