@@ -16,6 +16,7 @@ const Content = styled.section`
 `;
 
 const Container = styled.div`
+  padding-bottom: 50px;
   .start {
     padding: 80px 10%;
     @media screen and (max-width: 650px) {
@@ -141,12 +142,12 @@ const HistorySection = styled.div`
   .goalBackr{
     width: 100%;
     height: 200px;  
-    background: rgba(128, 73, 136, 0.5);    position: absolute;
+    background: rgb(128 73 136 / 68%);   
+    position: absolute;
     top: 0;
     height: 50vh;
     z-index: 5;
   }
-  
   
   .container{
     padding: 80px 10%;
@@ -185,6 +186,7 @@ const HistorySection = styled.div`
   }
   .step {
     width: 30%;
+    
 
     @media screen and (max-width: 750px) {
       width: 60%;
@@ -217,14 +219,13 @@ const HistorySection = styled.div`
     font-size: 20px;
     font-weight: 400;
     line-height: 26px;
-    color: #999;
-    color: #804988;
+    color: #222;
   }
 `;
 
 
 const PhilosophySection = styled.div`
-  padding-top: 0%;
+  padding-top: 0;
   padding-bottom: 8%;
 `;
 
@@ -288,7 +289,7 @@ export default function About() {
               </div>
             </div>
           </HistorySection>
-          <PhilosophySection className="start philosophy">
+          <PhilosophySection className="start philosophy" style={{'padding-top': '0',}}>
             <div className="container">
               <div className="start-cont">
                 <div className="horizontal horizontal2">

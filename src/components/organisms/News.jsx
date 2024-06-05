@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Slider from "react-slick";
 import BlockTitle from '../atoms/BlockTitle';
 import Image from 'next/image';
+import useContentful from '@/useContentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Van3 from '@/assets/img/van3.jpeg'
 import { MoreNewsSvg } from '@/assets/icon/MoreNewsSvg';
 
 const Content = styled.div`
-    display: block;
-    padding: 50px 10%;
+  display: block;
+  padding: 50px 10%;
 `;
 
 const NewsContainer = styled(Slider)`
@@ -26,10 +28,10 @@ const NewsCard = styled.div`
 
   p {
     font-family: 'Proxima Soft', sans-serif;
-    font-size: 18px;
-    line-height: 120%;
+    font-size: 16px;
+    line-height: 22px;
     color: #606060;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   .line {
@@ -58,9 +60,9 @@ const NewsCard = styled.div`
   @media (max-width: 400px) {
 
     p {
-      font-size: 16px;
-      line-height: 120%;
-      margin-top: 25px;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 15px;
     }
   }
 `;
@@ -101,6 +103,11 @@ const Elips = styled.div`
 
 const NewsImage = styled.div`
   width: 100%;
+  height: 250px;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
 `;
 
 const SVG = styled.div`
@@ -112,6 +119,20 @@ const SVG = styled.div`
 
   @media (max-width: 570px) {
     width: 10px;
+  }
+`;
+
+const NewsTitle = styled.h2`
+  font-family: 'Jost', sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  color: #302733;
+  margin-top: 30px;
+
+  @media (max-width: 700px){
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 20px;
   }
 `;
 
@@ -145,69 +166,44 @@ const settings = {
   ]
 };
 
-
-
-const NewsTitle = styled.h2`
-  font-family: 'Jost', sans-serif;
-  font-size: 23px;
-  color: #302733;
-  margin: 20px 0 0px 0;
-`;
-
-
-
-const posts = [
-  {
-    id: 1,
-    title: 'Первый пост',
-    excerpt: 'Краткое описание первого поста',
-    published_at: '2021-01-01',
-    featured_images: [{ path: Van3 }]
-  },
-  {
-    id: 2,
-    title: 'Второй пост',
-    excerpt: 'Краткое описание второго поста',
-    published_at: '2021-01-02',
-    featured_images: [{ path: Van3 }]
-  },
-  {
-    id: 3,
-    title: 'Третий пост',
-    excerpt: 'Краткое описание третьего поста',
-    published_at: '2021-01-03',
-    featured_images: [{ path: Van3 }]
-  }
-];
-
 const News = () => {
+  const { getNews } = useContentful();
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    getNews().then(data => {
+      console.log(data);
+      setPosts(data);
+    });
+  }, []);
+
   return (
     <Content>
-        <BlockTitle title="Статьи, новости, полезные материалы" description="Истории и события из жизни компании" />
-        <NewsContainer {...settings}>
-            {posts.map(post => (
-              <NewsCard key={post.id}>
-                <NewsContent>
-                  <NewsImage>
-                  {post.featured_images.map(image => (
-                      <Image key={image.path} src={image.path} alt="News" layout="responsive" width={500} height={300} />
-                  ))}
-                  </NewsImage>
-                  <NewsTitle>{post.title}</NewsTitle> 
-                  <p>{post.excerpt}</p>
-                  <div className="line"></div>
-                  <div className="underline">
-                      <DateText>{new Date(post.published_at).toLocaleDateString()}</DateText>
-                      <Elips>
-                        <SVG>
-                         <MoreNewsSvg/>
-                        </SVG>
-                      </Elips>
-                  </div>
-                </NewsContent>
-              </NewsCard>
-            ))}
-        </NewsContainer>
+      <BlockTitle title="Статьи, новости, полезные материалы" description="Читайте последние новости и интересные статьи здесь." />
+      <NewsContainer {...settings}>
+        {posts.map(post => (
+          <NewsCard key={post.id}>
+            <a href={post.link} target="_blank" >
+            <NewsContent>
+                <NewsImage>
+                  <img src={post.imageLink} alt="News" style={{ width: '100%', height: '100%' }} />
+                </NewsImage>
+                <NewsTitle>{post.title}</NewsTitle>
+                <div>{documentToReactComponents(post.text)}</div> {/* Используйте <div> вместо <p> */}
+                <div className="line"></div>
+                <div className="underline">
+                  <DateText>{new Date(post.date).toLocaleDateString()}</DateText>
+                  <Elips>
+                    <SVG>
+                      <MoreNewsSvg />
+                    </SVG>
+                  </Elips>
+                </div>
+              </NewsContent>
+            </a>
+          </NewsCard>
+        ))}
+      </NewsContainer>
     </Content>
   );
 };

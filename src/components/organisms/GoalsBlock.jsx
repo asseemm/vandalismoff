@@ -105,13 +105,12 @@ const GoalIconImg = styled.div`
     height: 80px;
     position: relative;
 `;
+
 const GoalIconImgVis = styled.div`
     width: 70px;
     height: 70px;
     position: relative;
 `;
-
-
 
 const GoalInfo = styled.div`
     display: grid;
@@ -124,7 +123,6 @@ const GoalInfo = styled.div`
         text-align: left;
     }
 `;
-
 
 const GoalTitle = styled.p`
     font-family : "Jost", sans-serif;
@@ -145,7 +143,7 @@ const GoalTitle = styled.p`
 
 const GoalDesc = styled.p`
     font-family : "Jost", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     color: #222;
 
@@ -170,17 +168,23 @@ const GoalsBlock = () => {
             <GoalBLock>
                 <GoalContent>
                     <GoalIcon>
-                    <Image src={Vision} alt="Визион" width={100} height={100} />
+                        <GoalIconImgVis>
+                            <Image src={Vision} alt="Визион" layout="fill" objectFit="contain" />
+                        </GoalIconImgVis>
                     </GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Изменить мышление общества</GoalTitle>
-                        <GoalDesc>Исправить нарушенное мышление общества, направив его в правильное русло.</GoalDesc>
+                        <GoalDesc>Исправить старое мышление общества, направив его в правильное русло.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>
             <GoalBLock>
                 <GoalContent>
-                    <GoalIcon></GoalIcon>
+                    <GoalIcon>
+                        <GoalIconImg>
+                        <Image src={Kraska} alt="Визион" layout="fill" objectFit="contain" />
+                        </GoalIconImg>
+                    </GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Противодействовать актам вандализма</GoalTitle>
                         <GoalDesc>Снизить количество случаев вандализма в нашей стране.</GoalDesc>
@@ -196,7 +200,7 @@ const GoalsBlock = () => {
                     </GoalIcon>
                     <GoalInfo>
                         <GoalTitle>Пробудить отвественность</GoalTitle>
-                        <GoalDesc>Призвать людей к ответственности за свои действия и нарушения.</GoalDesc>
+                        <GoalDesc>Донести до каждого, что Казахстан - это наша зона ответственности.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>
             </GoalBLock>
@@ -208,7 +212,7 @@ const GoalsBlock = () => {
                         </GoalIconImg>
                     </GoalIcon>
                     <GoalInfo>
-                        <GoalTitle>Жить в комфортной стране</GoalTitle>
+                        <GoalTitle>Достичь нового Казахстана</GoalTitle>
                         <GoalDesc>Перестать создавать дискомфорт своему же городу и стране.</GoalDesc>
                     </GoalInfo>
                 </GoalContent>

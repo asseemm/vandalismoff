@@ -21,6 +21,7 @@ import Member5 from '@/assets/img/Member5.png';
 import Member6 from '@/assets/img/Member6.png';
 
 const Block = styled.div`
+  position: relative;
   padding: 100px 10%;
   padding-top: 50px;
   margin-bottom: 100px;
@@ -120,6 +121,17 @@ const MemberIcon = styled.div`
   }
 `;
 
+const More = styled.a`
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  font-family: Jost;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #804988;
+`;
+
+
 const positions = [
   { top: '10%', left: '85%', transform: 'translate(-50%, -50%)' }, // Top
   { top: '50%', left: '90%', transform: 'translate(-50%, -50%)' }, // Right
@@ -173,7 +185,7 @@ const Team = () => {
       <BlockTitle title="Наша команда" description="Это лидер нашей команды - Акерке" />
       <TeamContainer onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} ref={containerRef}>
         <CentralFigure>
-          <Image src={centralImage} alt="Central Figure" fill sizes="(max-width: 600px) 100vw, 600px" style={{ objectFit: 'cover' }} priority />
+          <Image src={centralImage} alt="Central Figure" fill sizes="(max-width: 600px) 100vw, 600px" style={{ objectFit: 'contain' }} priority />
         </CentralFigure>
         {positions.map((pos, index) => (
           <MemberIcon key={index} style={pos}>
@@ -181,6 +193,7 @@ const Team = () => {
           </MemberIcon>
         ))}
       </TeamContainer>
+      <More href="/team">Все участники</More>
     </Block>
   );
 };
