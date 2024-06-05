@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, Suspense } from 'react';
 import styled from 'styled-components';
+import useContentful from '@/useContentful';
 import DefaultLayout from "@/components/templates/defaultLayout";
 import BlockTitle from "@/components/atoms/BlockTitle";
 import Header from "@/components/organisms/Header";
 import Image from 'next/image';
 
-
-
-import Van3 from '@/assets/img/van3.jpeg'
+import Van3 from '@/assets/img/akerke.png'
 import { BlackTelegramSVG } from "@/assets/icon/BlackTelegramSVG";
 import { BlackInstagramSVG } from "@/assets/icon/BlackInstagramSVG";
 import { BlackMailSVG } from "@/assets/icon/BlackMailSVG";
@@ -17,8 +16,9 @@ const Content = styled.section`
   max-width: 100%;
   height: auto; 
   padding: 100px 10%;
+
   @media screen and (max-width: 650px) {
-      padding: 40px 10%;
+    padding: 40px 10%;
   }
 `;
 
@@ -29,14 +29,12 @@ const TeamContainer = styled.div`
   align-items: flex-start;
   height: auto;
   margin-top: 5%;
-  
-  
 `;
 
 const TeamCard = styled.div`
   position: relative;
   width: 22%;
-  height: 50vh;
+  height: 45vh;
   background-color: #ccc;
   margin-bottom: 80px;
 
@@ -86,8 +84,6 @@ const CardInfo = styled.div`
   @media screen and (max-width: 550px) {
     bottom: -40px;
   }
-
-
   `;
 
 const CardTitle = styled.h3`
@@ -145,89 +141,31 @@ const SocialIcon = styled.div`
 
 
 const TeamPage = () => {
+  const { getTeam } = useContentful();
+  const [teamMembers, setTeamMembers] = useState([]);
+
+  useEffect(() => {
+    getTeam().then(setTeamMembers);
+  }, []);
+
   return (
     <TeamContainer>
-      <TeamCard key="Наг ">
-        <TeamImg>
-           <Img src={Van3} alt='img' priority />
-        </TeamImg>
-        <CardInfo>
-            <CardTitle>Наг Рейнольдс</CardTitle>
-            <CardRole>Финансовый директор</CardRole>
+      {teamMembers.map(member => (
+        <TeamCard key={member.id}>
+          <TeamImg>
+            <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </TeamImg>
+          <CardInfo>
+            <CardTitle>{member.name}</CardTitle>
+            <CardRole>{member.position}</CardRole>
             <SocialIcons>
-              <SocialIcon>
-              <BlackTelegramSVG/>
-              </SocialIcon>
-              <SocialIcon>
-              <BlackInstagramSVG/>
-              </SocialIcon>
-              <SocialIcon>
-              <BlackMailSVG/>
-              </SocialIcon>
+              {member.instagram && <SocialIcon as="a" href={member.instagram} target="_blank"><BlackInstagramSVG /></SocialIcon>}
+              {member.telegram && <SocialIcon as="a" href={member.telegram} target="_blank"><BlackTelegramSVG /></SocialIcon>}
+              {member.email && <SocialIcon as="a" href={`mailto:${member.email}`}><BlackMailSVG /></SocialIcon>}
             </SocialIcons>
-        </CardInfo>
-      </TeamCard>
-      <TeamCard key=" Рейнольдс">
-        <TeamImg>
-           <Img src={Van3} alt='img' />
-        </TeamImg>
-        <CardInfo>
-            <CardTitle>Наг Рейнольдс</CardTitle>
-            <CardRole>Финансовый директор</CardRole>
-            <SocialIcons>
-              <SocialIcon>
-              <BlackTelegramSVG/>
-              </SocialIcon>
-              <SocialIcon>
-               <BlackInstagramSVG/>
-              </SocialIcon>
-              <SocialIcon>
-               <BlackMailSVG/>
-              </SocialIcon>
-            </SocialIcons>
-        </CardInfo>
-      </TeamCard>
-      <TeamCard key="Наг Рейльдс">
-        <TeamImg>
-           <Img src={Van3} alt='img' priority />
-        </TeamImg>
-        <CardInfo>
-            <CardTitle>Наг Рейнольдс</CardTitle>
-            <CardRole>Финансовый директор</CardRole>
-            <SocialIcons>
-              <SocialIcon>
-              <BlackTelegramSVG/>
-              </SocialIcon>
-              <SocialIcon>
-              <BlackInstagramSVG/>
-              </SocialIcon>
-              <SocialIcon>
-              <BlackMailSVG/>
-              </SocialIcon>
-            </SocialIcons>
-        </CardInfo>
-      </TeamCard>
-      <TeamCard key="Наг Рейнльдс">
-        <TeamImg>
-           <Img src={Van3} alt='img' priority />
-        </TeamImg>
-        <CardInfo>
-            <CardTitle>Наг Рейнольдс</CardTitle>
-            <CardRole>Финансовый директор</CardRole>
-            <SocialIcons>
-              <SocialIcon>
-              <BlackTelegramSVG/>
-              </SocialIcon>
-              <SocialIcon>
-              <BlackInstagramSVG/>
-              </SocialIcon>
-              <SocialIcon>
-              <BlackMailSVG/>
-              </SocialIcon>
-            </SocialIcons>
-        </CardInfo>
-      </TeamCard>
-      {/* Добавьте других членов команды аналогичным образом */}
+          </CardInfo>
+        </TeamCard>
+      ))}
     </TeamContainer>
   );
 };
