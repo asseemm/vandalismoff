@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 import Menu from '@/components/atoms/HeaderMenu';
 import { MenuSVG } from '@/assets/icon/Menu';
 import { MenuWhite} from '@/assets/icon/MenuWhite';
+
+import  logo1 from '@/assets/icon/logo1.png';
+
 
 import { colors } from '../base/colors';
 
@@ -24,17 +28,23 @@ const HeaderContent = styled.div`
     padding: 40px 10%;
   }
 `;
+  const Logo = styled.div`
+  width: 80px;
 
-const Logo = styled.p`
-  font-size: 36px;
-  font-family: "Rubik Bubbles", system-ui;
-  color: ${({ color }) => (color ? color : colors.white)};
-
-  @media screen and (max-width: 700px){
-    font-size: 21px;
+  @media screen and (max-width: 3000px){
+    width: 100px;
   }
-`;
+  @media screen and (max-width: 1000px){
+         width: 60px;
+  }
 
+    @media screen and (max-width: 600px){
+      width: 40px;
+  }
+   @media screen and (max-width: 400px){
+    display: none;
+  }
+  `;
 const ToggleButton = styled.button`
   background-color: transparent;
   border: none;
@@ -66,6 +76,11 @@ const ToggleButton = styled.button`
 const MenuPurple = styled.div`
   display: ${({ $displaymenupurple }) => ($displaymenupurple ? $displaymenupurple : 'block')};
 `;
+const Img = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
 const MenuWhiteIcon = styled.div`
   display:  ${({ $displaymenuwhite }) => ($displaymenuwhite ? $displaymenuwhite : 'none')}; 
@@ -81,7 +96,9 @@ const Header = ({ $backgroundcolor, color, $displaymenupurple, $displaymenuwhite
   return (
     <HeaderStyle $backgroundcolor={$backgroundcolor} $position={$position}>
       <HeaderContent>
-        <Logo color={color}>LOGO</Logo>
+        <Logo >
+        <Img src={logo1} alt='img' priority />
+        </Logo>
         <ToggleButton onClick={toggleMenu}>
           {/* <Image src={MenuIcon} alt="Меню"/> */}
           <MenuPurple $displaymenupurple={$displaymenupurple}><MenuSVG /></MenuPurple>
