@@ -13,12 +13,13 @@ import UpRight from '@/assets/img/UpRightA.png';
 import DownLeft from '@/assets/img/DownLeftA.png';
 import DownRight from '@/assets/img/DownRightA.png';
 
-import Member1 from '@/assets/img/Member1.png';
-import Member2 from '@/assets/img/Member2.png';
-import Member3 from '@/assets/img/Member3.png';
+import Member1 from '@/assets/img/Member2.png';
+import Member2 from '@/assets/img/Member3.png';
+import Member3 from '@/assets/img/Member1.png';
 import Member4 from '@/assets/img/Member4.png';
 import Member5 from '@/assets/img/Member5.png';
 import Member6 from '@/assets/img/Member6.png';
+import Vectors from '@/assets/img/vectorsBack.png';
 
 const Block = styled.div`
   position: relative;
@@ -49,12 +50,21 @@ const TeamContainer = styled.div`
 `;
 
 const CentralFigure = styled.div`
-  width: 600px; 
-  height: 600px;
-  overflow: hidden;
   position: relative;
-  transition: all 0.7s ease;
+  width: 520px;
+  height: 520px;
+  overflow: hidden;
   margin-bottom: -200px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.5s ease;
+  }
 
   @media screen and (max-width: 1350px){
     width: 480px;
@@ -88,6 +98,10 @@ const MemberIcon = styled.div`
   cursor: pointer;
   transition: all 0.3s linear;
   animation: bounce 2s ease-in-out infinite;
+
+  &:hover{
+    animation: bounce 1s ease-in-out infinite;
+  }
 
 
   @media screen and (max-width: 1550px){
@@ -127,8 +141,41 @@ const More = styled.a`
   bottom: 0;
   font-family: Jost;
   font-size: 24px;
+  font-weight: 500;
   text-transform: uppercase;
   color: #804988;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+
+  &:hover{
+    gap: 30px;
+    margin-right: -10px;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 650px){
+    font-size: 18px;
+    svg{
+      width: 40px;
+    }
+  }
+`;
+
+const Back = styled(Image)`
+  position: absolute;
+  // top: 5%;
+  // right: 10%;
+  bottom: 5%;
+
+  @media (max-width: 1650px){
+    width: 100%;
+  }
+
+  @media (max-width: 650px){
+    display: none;
+  }
 `;
 
 
@@ -184,6 +231,7 @@ const Team = () => {
     <Block>
       <BlockTitle title="Наша команда" description="Это лидер нашей команды - Акерке" />
       <TeamContainer onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} ref={containerRef}>
+        <Back src={Vectors} />
         <CentralFigure>
           <Image src={centralImage} alt="Central Figure" fill sizes="(max-width: 600px) 100vw, 600px" style={{ objectFit: 'contain' }} priority />
         </CentralFigure>
@@ -193,7 +241,12 @@ const Team = () => {
           </MemberIcon>
         ))}
       </TeamContainer>
-      <More href="/team">Все участники</More>
+      <More href="/team">
+        Все участники
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M51.0607 13.0607C51.6464 12.4749 51.6464 11.5251 51.0607 10.9393L41.5147 1.3934C40.9289 0.807612 39.9792 0.807612 39.3934 1.3934C38.8076 1.97918 38.8076 2.92893 39.3934 3.51472L47.8787 12L39.3934 20.4853C38.8076 21.0711 38.8076 22.0208 39.3934 22.6066C39.9792 23.1924 40.9289 23.1924 41.5147 22.6066L51.0607 13.0607ZM0 13.5H50V10.5H0V13.5Z" fill="#804988"/>
+        </svg>
+      </More>
     </Block>
   );
 };
