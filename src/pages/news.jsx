@@ -5,6 +5,7 @@ import useContentful from '@/useContentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import DefaultLayout from "@/components/templates/defaultLayout";
 import Header from "@/components/organisms/Header";
+
 import Image from 'next/image';
 import Van3 from '@/assets/img/van3.jpeg'
 import { MoreNewsSvg } from '@/assets/icon/MoreNewsSvg';

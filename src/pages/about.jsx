@@ -1,14 +1,10 @@
 import React from "react";
 import styled from 'styled-components';
 import DefaultLayout from "@/components/templates/defaultLayout";
-import BlockTitle from "@/components/atoms/BlockTitle";
 import Header from "@/components/organisms/Header";
 import Image from 'next/image';
 
 import Van2 from '@/assets/img/van2.JPG'
-import { GoalSVG } from '@/assets/icon/GoalSVG';
-
-
 
 const Content = styled.section`
   max-width: 100%;

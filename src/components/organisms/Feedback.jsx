@@ -122,7 +122,7 @@ function Feedback() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': getCookie('csrftoken')  // Установка CSRF токена
+                'X-CSRFToken': getCookie('csrftoken')
             },
             body: JSON.stringify({ name: name, phone_number: phone })
         })
@@ -135,7 +135,6 @@ function Feedback() {
         });
     };
 
-    // Функция для получения CSRF токена
     function getCookie(name) {
         let cookieValue = null;
         if (document.cookie && document.cookie !== '') {

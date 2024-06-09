@@ -35,7 +35,7 @@ const useContentful = () => {
   const getNews = async () => {
     try {
       const entries = await client.getEntries({
-        content_type: "news", // Укажите здесь свой content_type для новостей
+        content_type: "news",
         select: "fields.newsTitle, fields.newsText, fields.newDate, fields.newsImg, fields.newsLink, fields.newsImgLink"
       });
   
@@ -61,7 +61,7 @@ const useContentful = () => {
   const getTeam = async () => {
     try {
       const entries = await client.getEntries({
-        content_type: "team", // Make sure this matches your Contentful content type ID for the team
+        content_type: "team",
         order: "fields.teamPos"
       });
   

@@ -83,7 +83,7 @@ return (
                 <ContactsInfo>
                     <InfoContent>
                     <InfoTitle>Адрес:</InfoTitle>
-                    <InfoText><Link>РК, Астана, район Есиль, ул. Динмухамеда Кунаева, здание 12/1, 6 этаж, офис 6-06</Link></InfoText>
+                    <InfoText>РК, Астана, район Есиль, ул. Динмухамеда Кунаева, здание 12/1, 6 этаж, офис 6-06</InfoText>
                     <Line />
                     <InfoTitle>Почта:</InfoTitle>
                     <InfoText><Link href="mailto:@lwsolution@mail.ru">lwsolution@mail.ru</Link></InfoText>

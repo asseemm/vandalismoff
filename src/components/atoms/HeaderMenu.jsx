@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 import { CloseSVG } from '@/assets/icon/CloseSVG';
 
 import { colors } from '../base/colors';
@@ -49,7 +50,7 @@ const MenuItem = styled.li`
   width: 100%;
 `;
 
-const ItemLink = styled.a`
+const ItemLink = styled(Link)`
   padding: 20px;
   float: right;
   font-size: 24px;

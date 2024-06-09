@@ -6,7 +6,6 @@ import BlockTitle from "@/components/atoms/BlockTitle";
 import Header from "@/components/organisms/Header";
 import Image from 'next/image';
 
-import Van3 from '@/assets/img/akerke.png'
 import { BlackTelegramSVG } from "@/assets/icon/BlackTelegramSVG";
 import { BlackInstagramSVG } from "@/assets/icon/BlackInstagramSVG";
 import { BlackMailSVG } from "@/assets/icon/BlackMailSVG";
