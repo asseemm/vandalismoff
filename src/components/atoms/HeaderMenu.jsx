@@ -39,8 +39,9 @@ const MenuContent = styled.ul`
   gap: 2%;
 
   @media screen and (max-width: 450px){
-    display: block;
+    // display: block;
     width: 90%;
+    gap: 0;
   }
 `;
 
@@ -63,6 +64,10 @@ const ItemLink = styled.a`
 
   @media screen and (max-width: 950px){
     font-size: 20px;
+  }
+
+  @media screen and (max-width: 450px){
+    font-size: 18px;
   }
 `;
 

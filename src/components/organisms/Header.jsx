@@ -25,10 +25,11 @@ const HeaderContent = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: 550px){
-    padding: 40px 10%;
+    padding: 24px 10%;
+    justify-content: right;
   }
 `;
-  const Logo = styled.div`
+const Logo = styled.div`
   width: 80px;
 
   @media screen and (max-width: 3000px){
@@ -38,13 +39,13 @@ const HeaderContent = styled.div`
          width: 60px;
   }
 
-    @media screen and (max-width: 600px){
-      width: 40px;
+  @media screen and (max-width: 600px){
+    width: 40px;
   }
-   @media screen and (max-width: 400px){
+  @media screen and (max-width: 400px){
     display: none;
   }
-  `;
+`;
 const ToggleButton = styled.button`
   background-color: transparent;
   border: none;

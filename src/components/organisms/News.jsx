@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Slider from "react-slick";
-import BlockTitle from '../atoms/BlockTitle';
-import Image from 'next/image';
 import useContentful from '@/useContentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import BlockTitle from '../atoms/BlockTitle';
+import Image from 'next/image';
 import Van3 from '@/assets/img/van3.jpeg'
 import { MoreNewsSvg } from '@/assets/icon/MoreNewsSvg';
 

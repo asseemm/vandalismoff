@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import useContentful from '@/useContentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import DefaultLayout from "@/components/templates/defaultLayout";
 import Header from "@/components/organisms/Header";
 import Image from 'next/image';
@@ -38,10 +40,10 @@ const NewsCard = styled.div`
 
   p {
     font-family: 'Proxima Soft', sans-serif;
-    font-size: 18px;
-    line-height: 120%;
+    font-size: 16px;
+    line-height: 22px;
     color: #606060;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   .line {
@@ -116,8 +118,12 @@ const Elips = styled.div`
 
 const NewsImage = styled.div`
   width: 100%;
+  height: 250px;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
 `;
-
 const SVG = styled.div`
   width: 20px;
 
@@ -132,9 +138,16 @@ const SVG = styled.div`
 
 const NewsTitle = styled.h2`
   font-family: 'Jost', sans-serif;
-  font-size: 23px;
+  font-size: 24px;
+  line-height: 26px;
   color: #302733;
-  margin: 20px 0 0px 0;
+  margin-top: 30px;
+
+  @media (max-width: 700px){
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 20px;
+  }
 `;
 
 const posts = [
@@ -162,6 +175,15 @@ const posts = [
 ];
 
 export default function News() {
+  const { getNews } = useContentful();
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    getNews().then(data => {
+      console.log(data);
+      setPosts(data);
+    });
+  }, []);
   return (
     <DefaultLayout>
         <Header $backgroundcolor={'#804988'} color={'#fff'} $displaymenuwhite={'block'} $displaymenupurple={'none'}/>
@@ -185,17 +207,16 @@ export default function News() {
                 <NewsContainer>
                     {posts.map(post => (
                       <NewsCard key={post.id}>
+                        <a href={post.link} target="_blank" >
                         <NewsContent>
-                          <NewsImage data-aos="fade-up">
-                            {post.featured_images.map(image => (
-                                <Image key={image.path} src={image.path} alt="News" layout="responsive" width={500} height={300} />
-                            ))}
-                          </NewsImage>
+                        <NewsImage data-aos="fade-up">
+                          <img src={post.imageLink} alt="News" style={{ width: '100%', height: '100%' }} />
+                        </NewsImage>
                           <NewsTitle data-aos="fade-up">{post.title}</NewsTitle> 
-                          <p data-aos="fade-up">{post.excerpt}</p>
+                          <p data-aos="fade-up">{documentToReactComponents(post.text)}</p>
                           <div className="line" data-aos="fade-up"></div>
                           <div className="underline" data-aos="fade-up">
-                              <DateText>{new Date(post.published_at).toLocaleDateString()}</DateText>
+                              <DateText>{post.date}</DateText>
                               <Elips>
                                 <SVG>
                                   <MoreNewsSvg/>
@@ -203,6 +224,7 @@ export default function News() {
                               </Elips>
                           </div>
                         </NewsContent>
+                        </a>
                       </NewsCard>
                     ))}
                 </NewsContainer>

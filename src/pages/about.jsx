@@ -20,7 +20,7 @@ const Container = styled.div`
   .start {
     padding: 80px 10%;
     @media screen and (max-width: 650px) {
-        padding: 40px 10%;
+      padding: 40px 10%;
     }
   }
   .start-cont {
@@ -129,11 +129,9 @@ const Container = styled.div`
     font-family: "Jost", sans-serif;
 
     @media screen and (max-width: 500px) {
-      font-size: 25px; 
-    }
-    
+      font-size: 21px; 
+    } 
   }
-  
 `;
 
 const HistorySection = styled.div`
@@ -147,6 +145,10 @@ const HistorySection = styled.div`
     top: 0;
     height: 50vh;
     z-index: 5;
+
+    @media screen and (max-width: 550px) {
+      height: 30vh;
+  }
   }
   
   .container{
@@ -186,11 +188,15 @@ const HistorySection = styled.div`
   }
   .step {
     width: 30%;
-    
 
     @media screen and (max-width: 750px) {
       width: 60%;
       margin-bottom: 5%;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 100%;
+      margin-top: 30px;
     }
   }
   .img {
@@ -200,6 +206,10 @@ const HistorySection = styled.div`
 
     @media screen and (max-width: 750px) {
       height: 35h;
+    }
+
+    @media screen and (max-width: 550px) {
+      height: 200px;
     }
   }
   .img img {
@@ -214,12 +224,24 @@ const HistorySection = styled.div`
     margin-top: 10%;
     margin-bottom: 3%;
     color: #804988;
+
+    @media screen and (max-width: 550px) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
   }
   .text {
     font-size: 20px;
     font-weight: 400;
     line-height: 26px;
     color: #222;
+
+    @media screen and (max-width: 550px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 `;
 
