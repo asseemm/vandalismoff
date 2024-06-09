@@ -1,8 +1,9 @@
   import React from 'react';
   import styled from 'styled-components';
   import Image from 'next/image';
-  import BlockTitle from '../atoms/BlockTitle';
+  import Link from 'next/link';
 
+  import BlockTitle from '../atoms/BlockTitle';
   import Van1 from '@/assets/img/van1.jpg'
   import Van2 from '@/assets/img/van2.JPG'
   import Van3 from '@/assets/img/van3.jpeg'
@@ -150,7 +151,7 @@
             <AboutText data-aos="fade-up">
               Мы, команда VandalismOFF, ежедневно работаем над тем, чтобы противостоять актам вандализма и пропагандировать уважение к общественным пространствам. Вдохновленные общей целью, мы объединились для того, чтобы внести свой вклад в сохранение культурного и градостроительного наследия нашей страны. Наши усилия направлены не только на борьбу с проявлениями вандализма, но и на формирование культуры уважения и бережного отношения к общественным пространствам. Мы проводим образовательные кампании, организуем мероприятия и разрабатываем инициативы, призванные мотивировать жителей к активному участию в улучшении качества жизни в их городах. Наш сайт служит платформой для обмена опытом и успешными практиками, помогая каждому осознать свою роль в создании безопасного и привлекательного городского пространства.
             </AboutText>
-            <MoreButton data-aos="fade-up"><a href="/about">Больше</a></MoreButton>
+            <MoreButton data-aos="fade-up"><Link href="/about">Больше</Link></MoreButton>
           </AboutInfo>
           <AboutImages>
             <ImagesColumn>

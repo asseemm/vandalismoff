@@ -148,7 +148,7 @@ const MainBlock = () => {
           <Title data-aos="fade-up">ВандализмOFF</Title>
           <HInfo data-aos="fade-up"> 
             <TextLine />
-            <Subtitle>Группа активистов молодежного <br /> движения "Жана Адамдар"</Subtitle>
+            <Subtitle>Группа активистов молодежного <br /> движения &quot;Жана Адамдар&quot;</Subtitle>
           </HInfo>
             <Link href="/#feedback" data-aos="fade-up">
                 <div className='circle-btn'></div>
