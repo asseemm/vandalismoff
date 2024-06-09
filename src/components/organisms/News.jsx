@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Slider from "react-slick";
+import Link from 'next/link';
 import useContentful from '@/useContentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import BlockTitle from '../atoms/BlockTitle';
@@ -183,7 +184,7 @@ const News = () => {
       <NewsContainer {...settings}>
         {posts.map(post => (
           <NewsCard key={post.id}>
-            <a href={post.link} target="_blank" >
+            <Link href={post.link} target="_blank" >
             <NewsContent>
                 <NewsImage data-aos="fade-up">
                   <img src={post.imageLink} alt="News" style={{ width: '100%', height: '100%' }} />
@@ -200,7 +201,7 @@ const News = () => {
                   </Elips>
                 </div>
               </NewsContent>
-            </a>
+            </Link>
           </NewsCard>
         ))}
       </NewsContainer>

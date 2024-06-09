@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import DefaultLayout from "@/components/templates/defaultLayout";
+import Link from "next/link";
 import BlockTitle from "@/components/atoms/BlockTitle";
 import Header from "@/components/organisms/Header";
 
@@ -82,14 +83,14 @@ return (
                 <ContactsInfo>
                     <InfoContent>
                     <InfoTitle>Адрес:</InfoTitle>
-                    <InfoText><a>РК, Астана, район Есиль, ул. Динмухамеда Кунаева, здание 12/1, 6 этаж, офис 6-06</a></InfoText>
+                    <InfoText><Link>РК, Астана, район Есиль, ул. Динмухамеда Кунаева, здание 12/1, 6 этаж, офис 6-06</Link></InfoText>
                     <Line />
                     <InfoTitle>Почта:</InfoTitle>
-                    <InfoText><a href="mailto:@lwsolution@mail.ru">lwsolution@mail.ru</a></InfoText>
+                    <InfoText><Link href="mailto:@lwsolution@mail.ru">lwsolution@mail.ru</Link></InfoText>
                     <Line />
                     <InfoTitle>Телефон: </InfoTitle>
-                    <InfoText><a href="tel:+77172755091">+7 7172 75 50 91</a></InfoText>
-                    <InfoText><a target="_blank" href="https://wa.me/+77777755091">+7 777 775 50 91</a></InfoText>
+                    <InfoText><Link href="tel:+77172755091">+7 7172 75 50 91</Link></InfoText>
+                    <InfoText><Link target="_blank" href="https://wa.me/+77777755091">+7 777 775 50 91</Link></InfoText>
                     </InfoContent>
                 </ContactsInfo>
                 <Map>

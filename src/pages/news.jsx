@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 import useContentful from '@/useContentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import DefaultLayout from "@/components/templates/defaultLayout";
@@ -207,7 +208,7 @@ export default function News() {
                 <NewsContainer>
                     {posts.map(post => (
                       <NewsCard key={post.id}>
-                        <a href={post.link} target="_blank" >
+                        <Link href={post.link} target="_blank" >
                         <NewsContent>
                         <NewsImage data-aos="fade-up">
                           <img src={post.imageLink} alt="News" style={{ width: '100%', height: '100%' }} />
@@ -224,7 +225,7 @@ export default function News() {
                               </Elips>
                           </div>
                         </NewsContent>
-                        </a>
+                        </Link>
                       </NewsCard>
                     ))}
                 </NewsContainer>

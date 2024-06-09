@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import VideoLink from "@/assets/video/van.mp4";
+import Link from 'next/link';
 import Image from 'next/image';
 
 import CircleBtn from '@/assets/img/circle_btn.png';
@@ -149,9 +150,9 @@ const MainBlock = () => {
             <TextLine />
             <Subtitle>Группа активистов молодежного <br /> движения "Жана Адамдар"</Subtitle>
           </HInfo>
-            <a href="/#feedback" data-aos="fade-up">
+            <Link href="/#feedback" data-aos="fade-up">
                 <div className='circle-btn'></div>
-            </a>
+            </Link>
         </MainContent>
       </BlockContent>
     </BlockStyle>
