@@ -4,7 +4,9 @@ import DefaultLayout from "@/components/templates/defaultLayout";
 import Header from "@/components/organisms/Header";
 import Image from 'next/image';
 
-import Van2 from '@/assets/img/van2.JPG'
+import Van2 from '@/assets/img/about_conv.JPG'
+import Case1 from '@/assets/img/case1.png'
+import Case2 from '@/assets/img/case2.png'
 
 const Content = styled.section`
   max-width: 100%;
@@ -203,6 +205,7 @@ const HistorySection = styled.div`
     width: 100%;
     height: 32vh;
     background-color: #c2c2c2;
+    object-fit: cover;
 
     @media screen and (max-width: 750px) {
       height: 35h;
@@ -215,6 +218,7 @@ const HistorySection = styled.div`
   .img img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
   .year {
     font-size: 30px;
@@ -262,7 +266,7 @@ export default function About() {
               <div className="start-cont">
                 <div className="horizontal">
                   <div className="line"></div>
-                  <p>ОСНОВАНИЕ КОМПАНИИ</p>
+                  <p>ОСНОВАНИЕ Группы</p>
                 </div>
                 <div className="start-info">
                   <div className="block-head" data-aos="zoom-in">
@@ -270,12 +274,13 @@ export default function About() {
                       <div className="line"></div>
                       <p>ВАНДАЛИЗМ<span className="txt-purple">OFF</span></p>
                     </div>
-                    <p className="title title-left">Компания основана в 2003 году</p>
+                    <p className="title title-left">Группа активистов против вандализма</p>
                     <div className="blue-line"></div>
                   </div>
                   <div className="text" data-aos="zoom-in">
-                    <p>Компания начала свою деятельность, которая в основном была связана с поставками оборудования для нефтегазового сектора, в 2003 году. С тех пор название компании сменилось с Urals LTD на Urals QA в 2008 году и расширило сферу своих услуг до поставок электрооборудования и запасных частей.
-                      <br /><br /> Клиентская база и партнеры включали, но не ограничивались следующими организациями и их дочерними компаниями: NCOC N.V., КазМунайГаз, Интергаз, КазТрансОйл, Казгермунай, Озенмунайгаз, Эмбамунайгаз.</p>
+                    <p>
+                    Основание ВандализмOFF "ВандализмOFF" был основан в 2023 году как часть движения "Жаңа Адамдар", направленного на борьбу с вандализмом и развитие гражданской ответственности в Казахстане. Инициатива началась как ответ на возрастающие вызовы вандализма, угрожающие культурному наследию и общественной безопасности наших городов. С тех пор "ВандализмOFF" стал символом активной гражданской позиции, объединяющей усилия сообщества для охраны и восстановления общественных и культурных пространств.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -292,19 +297,19 @@ export default function About() {
                 </div>
                 <div className="history-steps">
                   <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} priority /></div>
-                    <p className="year">2008</p>
-                    <p className="text">Ребрендинг</p>
+                    <div className="img"> <Image src={Case1} alt="Введение на рынок в 2003 году" width={500} height={300} priority /></div>
+                    <p className="year">06.03</p>
+                    <p className="text">Первый кейс</p>
                   </div>
                   <div className="step" data-aos="zoom-in">
                     <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} priority /></div>
-                    <p className="year">2022</p>
-                    <p className="text">Расширение</p>
+                    <p className="year">18.03</p>
+                    <p className="text">Конвент</p>
                   </div>
                   <div className="step" data-aos="zoom-in">
-                    <div className="img"> <Image src={Van2} alt="Введение на рынок в 2003 году" width={500} height={300} priority /></div>
-                    <p className="year">2022</p>
-                    <p className="text">Расширение</p>
+                    <div className="img"> <Image src={Case2} alt="Введение на рынок в 2003 году" width={500} height={300} priority /></div>
+                    <p className="year">04.06</p>
+                    <p className="text">Второй кейс</p>
                   </div>
                 </div>
               </div>
@@ -323,8 +328,9 @@ export default function About() {
                     <div className="blue-line"></div>
                   </div>
                   <div className="text" data-aos="zoom-in">
-                    <p>Urals QA стремится к построению прочных и долгосрочных партнерских отношений. Мы работаем с точностью и вниманием к каждой детали, выполняя проекты от начала до конца.
-                      <br /><br /> Мы постоянно стремимся к совершенству, проявляя мужество и настойчивость в решении сложных задач. Мы заботимся о том, чтобы наши услуги оказывались эффективно, а качество готовой продукции, предлагаемой потребителю, соответствовало стандартам и спецификациям клиента.</p>
+                    <p>
+                    Мы стремимся к созданию общества, где уважение к общественной и частной собственности является нормой, а не исключением. Наш подход основан на убеждении, что предотвращение вандализма начинается с изменения общественного сознания и поведения. Каждый член сообщества должен осознавать, что улучшение качества городской среды начинается с каждого из нас. Мы активно работаем с молодежью, ведь именно молодые люди — движущая сила любых изменений и нововведений в обществе.
+                    </p>
                   </div>
                 </div>
               </div>
