@@ -36,13 +36,9 @@ const Logo = styled.div`
     width: 100px;
   }
   @media screen and (max-width: 1000px){
-         width: 60px;
+    width: 60px;
   }
-
   @media screen and (max-width: 600px){
-    width: 40px;
-  }
-  @media screen and (max-width: 400px){
     display: none;
   }
 `;
@@ -98,10 +94,9 @@ const Header = ({ $backgroundcolor, color, $displaymenupurple, $displaymenuwhite
     <HeaderStyle $backgroundcolor={$backgroundcolor} $position={$position}>
       <HeaderContent $padding={$padding} >
         <Logo >
-        <Img src={logo1} alt='img' priority />
+          <Img src={logo1} alt='img' priority />
         </Logo>
         <ToggleButton onClick={toggleMenu}>
-          {/* <Image src={MenuIcon} alt="Меню"/> */}
           <MenuPurple $displaymenupurple={$displaymenupurple}><MenuSVG /></MenuPurple>
           <MenuWhiteIcon $displaymenuwhite={$displaymenuwhite}><MenuWhite /></MenuWhiteIcon>
         </ToggleButton>

@@ -1,11 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import VideoLink from "@/assets/video/van.mp4";
 import Link from 'next/link';
-import Image from 'next/image';
-
-import CircleBtn from '@/assets/img/circle_btn.png';
-import CircleIn from '@/assets/img/incircle.png';
 
 const BlockStyle = styled.div`
   max-width: 100%;
@@ -137,13 +133,28 @@ const TextLine = styled.div`
 `;
 
 const MainBlock = () => {
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const playVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    };
+    document.addEventListener('touchstart', playVideo);
+
+    return () => document.removeEventListener('touchstart', playVideo);
+  }, []);
+
+
   return (
     <BlockStyle>
       <BlockContent>
-        <VideoBackground autoPlay loop muted>
-          <source src={VideoLink} type="video/mp4" />
-          Your browser does not support the video tag.
-        </VideoBackground>
+      <VideoBackground autoPlay loop muted ref={videoRef}>
+        <source src={VideoLink} type="video/mp4" />
+        Your browser does not support the video tag.
+      </VideoBackground>
         <MainContent>
           <Title data-aos="fade-up">ВандализмOFF</Title>
           <HInfo data-aos="fade-up"> 

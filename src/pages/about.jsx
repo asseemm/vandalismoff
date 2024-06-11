@@ -144,9 +144,13 @@ const HistorySection = styled.div`
 
     @media screen and (max-width: 550px) {
       height: 30vh;
+    }
   }
+  .background-about{
+    @media screen and (max-width: 550px) {
+      height: 30vh;
+    }
   }
-  
   .container{
     padding: 80px 10%;
     position: relative;
@@ -278,9 +282,8 @@ export default function About() {
             </div>
           </div>
           <HistorySection>
-            <div className="goalBackr">
-            </div>
-               <div className="background-about"></div>
+            <div className="goalBackr"></div>
+            <div className="background-about"></div>
             <div className="container">
               <div className="history-cont">
                     <div className="block-head" data-aos="zoom-in">

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import Header from '@/components/organisms/Header';
+import Link from 'next/link';
 import Footer from '@/components/organisms/Footer';
 
 import InstagramIcon from '@/assets/icon/instagramsvg.svg';
@@ -28,7 +28,7 @@ export const SocialIcons = styled.div`
   margin-right: 10px;
 `;
 
-export const SocialIcon = styled.div`
+export const SocialIcon = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,9 +50,9 @@ const DefaultLayout = ({ children }) => {
   return (
     <div className="container">
       <SocialIcons>
-        <SocialIcon><Image src={WhatsappIcon} alt = 'icons' /> </SocialIcon>
-        <SocialIcon style={{'background': '#FFF0D9'}}><Image src={InstagramIcon} alt = 'icons' /> </SocialIcon>
-        <SocialIcon><Image src={TiktokIcon} alt = 'icons' /> </SocialIcon>
+        <SocialIcon href="https://wa.me/87028262615" target='_blank'><Image src={WhatsappIcon} alt = 'icons' /> </SocialIcon>
+        <SocialIcon href="https://www.instagram.com/vandalism_off/" style={{'background': '#FFF0D9'}} target='_blank'><Image src={InstagramIcon} alt = 'icons' /> </SocialIcon>
+        <SocialIcon href="https://www.tiktok.com/@zhana_adamdar" target='_blank'><Image src={TiktokIcon} alt = 'icons' /></SocialIcon>
       </SocialIcons>
       <Content>
         <main>{children}</main>
