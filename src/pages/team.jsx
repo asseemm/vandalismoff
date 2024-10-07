@@ -153,7 +153,7 @@ const TeamPage = () => {
       {teamMembers.map(member => (
         <TeamCard key={member.id}>
           <TeamImg>
-            <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
           </TeamImg>
           <CardInfo>
             <CardTitle data-aos="fade-up">{member.name}</CardTitle>
