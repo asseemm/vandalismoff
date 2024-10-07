@@ -237,7 +237,7 @@ const Team = () => {
         </CentralFigure>
         {positions.map((pos, index) => (
           <MemberIcon key={index} style={pos} data-aos="fade-up">
-            <Image src={memberImages[index]} alt={`Member ${index + 1}`} fill sizes="(max-width: 80px) 100vw, 80px" style={{ objectFit: 'cover' }} priority />
+            <Image src={memberImages[index]} alt={`Member ${index + 1}`} fill sizes="(max-width: 80px) 100vw, 80px" style={{ objectFit: 'contain' }} priority />
           </MemberIcon>
         ))}
       </TeamContainer>

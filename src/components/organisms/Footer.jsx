@@ -163,8 +163,8 @@ const Footer = () => {
           </FooterLinks>
           <FooterLinkColumnGray>
             <FooterLink href="/contacts">Контакты</FooterLink>
-            <FooterGrayLink href="tel:+770749696">+7(707)49696</FooterGrayLink>
-            <FooterGrayLink href="https://t.me/yourusername" target="_blank">@hgjghjhj</FooterGrayLink>
+            <FooterGrayLink href="tel:+77028262615">+7(702)8262615</FooterGrayLink>
+            <FooterGrayLink href="https://t.me/akerke_a05" target="_blank">@akerke_a05</FooterGrayLink>
           </FooterLinkColumnGray>
         </FooterInfo>
         <FooterGrayLine />
